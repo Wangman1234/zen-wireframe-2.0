@@ -153,8 +153,17 @@
       opacity: 0 !important;
       transition: opacity var(--na-anim-duration) normal !important;
     }
+    
+    #nav-bar-overflow-button{
+      opacity: 0 !important;
+      transition: opacity var(--na-anim-duration) normal !important;
+    }
 
     :has(#zen-sidebar-top-buttons:hover) #zen-sidebar-top-buttons-customization-target>* {
+      opacity: 1 !important;
+    }
+    
+    :has(#zen-sidebar-top-buttons:hover) #nav-bar-overflow-button{
       opacity: 1 !important;
     }
   }
@@ -317,6 +326,11 @@
   }
 }
 
+/* box shadow for compact sidebar */
+/* :root:not([zen-compact-mod="false"]) #titlebar{
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px !important;
+} */
+
 /* === SIDEBAR CONTENT === */
 
 #titlebar {
@@ -460,13 +474,6 @@ zen-folder {
   }
 }
 
-/* :root {
-  --wireframe-ess-width: 60px;
-}
-
-#zen-essentials-container, .zen-essentials-container {
-  grid-template-columns: repeat(var(--wireframe-ess-grid, 2), minmax(var(--wireframe-ess-width), auto)) !important;
-} */
 
 /* Border radius of essentials */
 .tabbrowser-tab:has([zen-essential]) .tab-background{
@@ -520,7 +527,7 @@ zen-folder {
 /* === AUDIO INDICATOR == */
 
 .tab-audio-button {
-  color: var(--zen-primary-color) !important;
+  color: var(--na-color-bg) !important;
 }
 
 /* === TRANSPARENT COMPACT SIDEBAR === */

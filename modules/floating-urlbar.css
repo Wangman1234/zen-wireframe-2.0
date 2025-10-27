@@ -71,12 +71,12 @@
   }
 }
 
-@media (-moz-pref("wireframe.nogaps.enabled")){
-  #tabbrowser-tabpanels > hbox{
-    border-radius: var(--na-window-border-radius) !important;
-    transition: border-radius 0.18s linear !important;
+  @media (-moz-pref("wireframe.nogaps.enabled")){
+    #tabbrowser-tabpanels > hbox{
+      border-radius: var(--na-window-border-radius) !important;
+      transition: border-radius 0.18s linear !important;
+    }
   }
-}
 }
 
 @keyframes webviewPop {

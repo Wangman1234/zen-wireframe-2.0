@@ -118,13 +118,13 @@ body > hbox {
   }
 } */
 
-@media (-moz-pref("zen.view.use-single-toolbar")) {
+/* @media (-moz-pref("zen.view.use-single-toolbar")) {
   @media not (-moz-bool-pref: "wireframe.urlbar.position.top"){
     :root[zen-sidebar-expanded="true"]:not([zen-compact-mode="true"]):not([inDOMFullscreen="true"]) #zen-tabbox-wrapper {
       margin-bottom: calc( var(--na-window-margin) - 10px ) !important;
     }
   }
-}
+} */
 
 /* content window + address bar */
 #zen-appcontent-wrapper {
@@ -156,19 +156,19 @@ body > hbox {
 /* ADD WEBVIEW BORDER RADIUS TO CHILDREN ELEMENTS OF TABBOX */
 :root:not([zen-compact-mode="true"]){
   @media not (-moz-pref("wireframe.nogaps.enabled")){
-    #tabbrowser-tabpanels > hbox{
+    #tabbrowser-tabpanels > *{
       border-radius: var(--na-user-border-radius) !important;
       transition: border-radius 0.18s linear !important;
     }
   }
 }
 
-:root:has([zen-compact-mode="true"]):not([inDOMFullscreen="true"]):not([sizemode="fullscreen"]){
+:root:has([zen-compact-mode="true"]):not([inDOMFullscreen="true"]):not([sizemode="fullscreen"]):has(#zen-appcontent-navbar-wrapper[zen-has-hover="false"]){
   #zen-tabbox-wrapper{
     border-radius: var(--na-window-border-radius) !important;
   }
   
-  #tabbrowser-tabpanels > hbox{
+  #tabbrowser-tabpanels > * {
     border-radius: var(--na-window-border-radius) !important;
   }
 }
@@ -187,20 +187,36 @@ body > hbox {
  }
 }
 
-@media (-moz-pref("zen.view.use-single-toolbar"))  {
-  :root:has(#tabbrowser-tabpanels [zen-split])[zen-compact-mode="true"] #zen-tabbox-wrapper {
-    margin: var(--na-window-margin) !important;
+/* NO GAPS COMPACT MODE (DEFAULT) */
+
+:root[zen-single-toolbar="true"][zen-compact-mode="true"]:not([customizing]) {
+  /* Credits to CompTechGuy */
+  #zen-appcontent-navbar-wrapper {
+	  min-height: 0.1px !important;
+		height: 0.1px !important;
+	}
+
+	#zen-appcontent-navbar-wrapper[zen-has-hover="true"] {
+	  height: 34px !important;
+	}
+  
+  --zen-element-separation: 0px !important;
+  
+  #zen-tabbox-wrapper,
+  #tabbox-browser,
+  #tabbox-browser > *
+  {
+    border-radius: 0 !important;
   }
 }
 
-:root[zen-compact-mode="true"] #zen-tabbox-wrapper {
-  margin: 0px !important;
-}
-
-@media not (-moz-bool-pref: "wireframe.urlbar.position.top"){
-  :root[zen-compact-mode="true"] #zen-tabbox-wrapper {
-    margin: 0px !important;
-  }
+/* FIX : REMOVE NAVBAR CONTAINER WHEN EMPTY */
+:root[zen-single-toolbar="true"][zen-compact-mode="true"]:not([customizing]):has(#PersonalToolbar[collapsed]){
+  @media (-moz-pref("zen.view.experimental-force-window-controls-left")){
+      #zen-appcontent-navbar-wrapper{
+        display: none !important;
+      }
+   }
 }
 
 /* === Webview Border Radius Pref === */

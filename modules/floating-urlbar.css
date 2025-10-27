@@ -14,6 +14,97 @@
   box-shadow: none !important;
 }
 
+#zen-tabbox-wrapper {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  transition:
+    transform 0.25s cubic-bezier(0.33, 1, 0.68, 1),
+    opacity 0.25s linear,
+    filter 0.25s ease;
+}
+
+:root:has(#urlbar[open]) #zen-tabbox-wrapper {
+  transform: scale(0.97);
+  opacity: 0.9;
+  filter: brightness(0.9) contrast(0.95);
+}
+
+
+/* FLASH BANG */
+
+/* :root:has(#urlbar[open]) #zen-tabbox-wrapper {
+  animation: nullBlink 0.18s ease-in-out;
+}
+@keyframes nullBlink {
+  0% { opacity: 1; }
+  40% { opacity: 0; transform: scale(0.98); }
+  100% { opacity: 1; transform: scale(1); }
+} */
+
+
+/* CRT Snap */
+
+/* #zen-tabbox-wrapper {
+  will-change: transform, opacity;
+  transition:
+    transform 0.22s cubic-bezier(0.33, 1, 0.68, 1),
+    opacity 0.22s linear;
+    filter 0.22 linear;
+}
+
+:root:has(#urlbar[open]) #zen-tabbox-wrapper {
+  animation: crtSnap 0.18s ease-in-out forwards;
+}
+
+@keyframes crtSnap {
+  0% { transform: scale(1); opacity: 1; }
+  40% { transform: scale(0.9) skewY(2deg); opacity: 0.4; filter: contrast(1.2); }
+  100% { transform: scale(0.95); opacity: 0.85; filter: contrast(1); }
+} */
+
+  
+:root:has(#urlbar[open]){
+  @media not (-moz-pref("wireframe.nogaps.enabled")){
+  #tabbrowser-tabpanels > hbox{
+    border-radius: var(--na-user-border-radius) !important;
+    transition: border-radius 0.18s linear !important;
+  }
+}
+
+@media (-moz-pref("wireframe.nogaps.enabled")){
+  #tabbrowser-tabpanels > hbox{
+    border-radius: var(--na-window-border-radius) !important;
+    transition: border-radius 0.18s linear !important;
+  }
+}
+}
+
+@keyframes webviewPop {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    filter: none;
+  }
+  100% {
+    transform: translateY(8px) scale(0.99);
+    opacity: 0.92;
+    filter: brightness(0.95);
+  }
+}
+
+@keyframes webviewReset {
+  0% {
+    transform: translateY(8px) scale(0.99);
+    opacity: 0.92;
+    filter: brightness(0.95);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    filter: none;
+  }
+}
+
 
 /* MULTI-TOOLBAR */
 

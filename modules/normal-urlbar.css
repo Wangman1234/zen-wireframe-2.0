@@ -1,19 +1,5 @@
 /* NORMAL URLBAR */
 
-/* urlbar opening and closing animations */
-#urlbar[open]{
-  animation: slideFromBottom 0.18s cubic-bezier(0.4, 0, 0.2, 1) forwards !important; 
-}
-
-#navigator-toolbox:has(#urlbar[zen-floating-urlbar="true"]):not([zen-user-show]) #urlbar[open]{
-  animation: slideFromBottomfloat 0.18s cubic-bezier(0.4, 0, 0.2, 1) forwards !important;
-}
-
-/* changed urlbar box shadow */
-#urlbar[open] .urlbar-background{
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px !important;
-}
-
 /* ====== NORMAL URLBAR BEHAVIOUR ======*/
 
 #navigator-toolbox:has(#urlbar[zen-floating-urlbar="false"]){

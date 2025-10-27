@@ -11,19 +11,18 @@
 
 /* changed urlbar box shadow */
 #urlbar[open] .urlbar-background{
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px !important;
+  box-shadow: none !important;
 }
 
 
+/* MULTI-TOOLBAR */
 
-/* SLIM */
-
-/* multi-toolbar */
 :root:not([zen-single-toolbar="true"]) {
   #urlbar[open]{
     animation: slideFromBottomfloat 0.18s cubic-bezier(0.4, 0, 0.2, 1) forwards !important;
   }
   
+  /* SLIM */
   @media (-moz-pref("wireframe.urlbar.style","slim")){
   /* move the navbar out from sidebar so url can have the same bahavior as other toolbar mode */
     [zen-compact-mode="true"] {
@@ -62,6 +61,10 @@
         top: auto !important;
         bottom: 62.5px !important;
     }
+    
+/*     #navigator-toolbox:has(#urlbar[zen-floating-urlbar="true"]):not([zen-user-show]) #urlbar[open]{
+      animation: slideFromBottomfloat 0.18s cubic-bezier(0.4, 0, 0.2, 1) forwards !important;
+    } */
     
     @media (-moz-pref("wireframe.urlbar.position.top")) {
       #urlbar[open] {
@@ -285,6 +288,7 @@
     }
   }
   
+  /* SLIM CENTER */
     @media (-moz-pref("wireframe.urlbar.style","slim(center)")){
     /* move the navbar out from sidebar so url can have the same bahavior as other toolbar mode */
     [zen-compact-mode="true"] {
@@ -593,29 +597,24 @@
     }
   }
 
+  /* FULL */
   @media (-moz-pref("wireframe.urlbar.style","full")){
     #urlbar[open] {
       min-width: var(--na-urlbar-width) !important;
       max-width: var(--na-urlbar-width) !important;
     }
 
-    @media not (-moz-pref("zen.view.use-single-toolbar")) {
-      #urlbar[open]{
-        animation: slideFromBottomfloat 0.18s cubic-bezier(0.4, 0, 0.2, 1) forwards !important;
-      }
-    }
-
     .urlbar-background{
       border-radius: var(--na-user-border-radius) !important;
     }
 
-  /*   #urlbar-container:has(#urlbar[breakout-extend]) #identity-box,
+    #urlbar-container:has(#urlbar[breakout-extend]) #identity-box,
     #urlbar-container:has(#urlbar[breakout-extend]) #page-action-buttons,
     #urlbar-container:has(#urlbar[breakout-extend]) #tracking-protection-icon-container,
     #urlbar-container:has(#urlbar[breakout-extend]) #urlbar-go-button,
     #urlbar-container:has(#urlbar[breakout-extend]) #urlbar-anon-search-settings {
      display: none !important;
-    } */
+    }
 
     #urlbar-container:has(#urlbar[breakout-extend]) #urlbar-results img {
       display: none !important;
@@ -623,7 +622,7 @@
   }
 }
 
-
+/* single toolbar */
 #navigator-toolbox:has(#urlbar[zen-floating-urlbar="true"]) {
   
   @media (-moz-pref("wireframe.urlbar.style","slim")){

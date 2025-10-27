@@ -56,6 +56,13 @@ body > hbox {
   outline-offset: 0px !important;
 }
 
+:root[sizemode="fullscreen"] #browser {
+  border: 0 !important;
+  border-radius: 0px !important;
+  outline: none !important;
+  outline-offset: 0px !important;
+}
+
 :root[inDOMFullscreen="true"] #browser {
   border: 0 !important;
   border-radius: 0px !important;
@@ -123,7 +130,7 @@ body > hbox {
 #zen-appcontent-wrapper {
   /* background-color: var(--na-color-bg) !important; */
   border-radius: 0px !important;
-/*   margin: 0px !important; */
+/*! margin: 0px !important; */
   padding: 0px !important;
 }
 
@@ -133,7 +140,7 @@ body > hbox {
   /*! background-color: var(--na-color-bg) !important; */
   overflow: clip !important;
  padding: 0px !important;
- border-radius: 0px !important;
+ border-radius: 0 !important;
 }
 
 /* WEBVIEW BORDER RADIUS */
@@ -147,13 +154,27 @@ body > hbox {
 }
 
 /* ADD WEBVIEW BORDER RADIUS TO CHILDREN ELEMENTS OF TABBOX */
-@media not (-moz-pref("wireframe.nogaps.enabled")){
-  #tabbrowser-tabpanels > hbox{
-    border-radius: var(--na-user-border-radius) !important;
-    transition: border-radius 0.18s linear !important;
+:root:not([zen-compact-mode="true"]){
+  @media not (-moz-pref("wireframe.nogaps.enabled")){
+    #tabbrowser-tabpanels > hbox{
+      border-radius: var(--na-user-border-radius) !important;
+      transition: border-radius 0.18s linear !important;
+    }
   }
 }
 
+:root:has([zen-compact-mode="true"]):not([inDOMFullscreen="true"]):not([sizemode="fullscreen"]){
+  #zen-tabbox-wrapper{
+    border-radius: var(--na-window-border-radius) !important;
+  }
+  
+  #tabbrowser-tabpanels > hbox{
+    border-radius: var(--na-window-border-radius) !important;
+  }
+}
+
+
+/* SPLIT TABS */
 @media (-moz-pref("zen.view.use-single-toolbar")) {
   :root:has(#tabbrowser-tabpanels [zen-split])[zen-compact-mode="true"][zen-sidebar-expanded="true"] #zen-tabbox-wrapper {
     margin: var(--na-window-margin) !important;
@@ -173,13 +194,11 @@ body > hbox {
 }
 
 :root[zen-compact-mode="true"] #zen-tabbox-wrapper {
-  border-top: 1px solid var(--na-color-border) !important;
   margin: 0px !important;
 }
 
 @media not (-moz-bool-pref: "wireframe.urlbar.position.top"){
   :root[zen-compact-mode="true"] #zen-tabbox-wrapper {
-    border-bottom: 1px solid var(--na-color-border) !important;
     margin: 0px !important;
   }
 }

@@ -1,10 +1,10 @@
 /* === BOTTOMBAR === */
 
 /* bottombar */
-#zen-appcontent-navbar-wrapper{
+/* #zen-appcontent-navbar-wrapper{
   margin-right: 10px !important;
   margin-left: 10px !important;
-}
+} */
 
 #zen-appcontent-navbar-container {
   border: 0px solid var(--na-color-border) !important;

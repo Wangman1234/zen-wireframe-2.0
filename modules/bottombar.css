@@ -18,7 +18,7 @@
 }
 
 /* hide bottombar elements */
-@media not (-moz-bool-pref: "zen.view.use-single-toolbar"){
+@media not (-moz-pref("zen.view.use-single-toolbar")) {
   @media (-moz-pref("wireframe.toolbar.hide")) {
     #zen-appcontent-navbar-container #identity-box,
     #zen-appcontent-navbar-container #page-action-buttons,

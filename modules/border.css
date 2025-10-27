@@ -257,6 +257,21 @@ body > hbox {
   }
 }
 
+/* BORDER FOR MULTI TOOLBAR TOP BAR */
+:root:not([zen-single-toolbar="true"])[zen-compact-mode="true"]{
+  @media not (-moz-pref("wireframe.urlbar.position.top")){
+    #zen-appcontent-navbar-wrapper{
+      border-top: 2px solid var(--na-color-border) !important;
+    }
+  }
+  
+  @media (-moz-pref("wireframe.urlbar.position.top")){
+    #zen-appcontent-navbar-wrapper{
+      border-bottom: 2px solid var(--na-color-border) !important;
+    }
+  }
+}
+
 /* === Webview Border Radius Pref === */
 @media (-moz-pref("wireframe.webview.border_radius", 0)) {
   :root {

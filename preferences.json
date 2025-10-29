@@ -215,7 +215,7 @@
   },
   {
     "type": "dropdown",
-    "label": "URLBar Opening Animation",
+    "label": "Webview Animation",
     "property": "wireframe.urlbar-focus.effect",
     "value": "string",
     "defaultValue": "Hard Shift",

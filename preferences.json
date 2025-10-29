@@ -113,7 +113,7 @@
     "value": "boolean",
     "default": false
   },
-  
+
   {
     "type": "text",
     "label": "URL bar Settings",
@@ -150,7 +150,67 @@
     "type": "checkbox",
     "value": "boolean"
   },
-  
+  {
+    "type": "separator"
+  },
+  {
+    "type": "dropdown",
+    "label": "URLBar Opening Animation",
+    "property": "wireframe.urlbar-open.effect",
+    "value": "string",
+    "defaultValue": "Slide from Bottom",
+    "options": [
+      {
+        "value": "Slide from Bottom",
+        "label": "Slide from Bottom"
+      },
+      {
+        "value": "Magnetic Rise",
+        "label": "Magnetic Rise"
+      },
+      {
+        "value": "PopCorn",
+        "label": "PopCorn"
+      },
+      {
+        "value": "Drop Off",
+        "label": "Drop Off"
+      },
+      {
+        "value": "Neon Flash",
+        "label": "Neon Flash"
+      },
+      {
+        "value": "Soft Warp",
+        "label": "Soft Warp"
+      },
+      {
+        "value": "Unfold",
+        "label": "Unfold"
+      },
+      {
+        "value": "Glitch Phase",
+        "label": "Glitch Phase"
+      },
+      {
+        "value": "Orbit Entry",
+        "label": "Orbit Entry"
+      },
+      {
+        "value": "Slam Up",
+        "label": "Slam Up"
+      },
+      {
+        "value": "Slinky Drop",
+        "label": "Slinky Drop"
+      },
+      {
+        "value": "Plane Shift",
+        "label": "Plane Shift"
+      }
+    ]
+  }
+
   {
     "type": "text",
     "label": "Blank Page Settings",
@@ -530,7 +590,7 @@
     "defaultValue": "",
     "placeholder": "12px"
   },
-  
+
   {
     "type": "text",
     "label": "Picture-in-Picture",
@@ -599,7 +659,7 @@
     "value": "boolean",
     "default": false
   },
-  
+
   {
     "type": "text",
     "label": "Media Player",

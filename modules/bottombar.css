@@ -6,6 +6,39 @@
   margin-left: 10px !important;
 } */
 
+/* ====== WEBVIEW WRAPPER ADJUSTMENTS FOR MULTI TOOLBAR ====== */
+
+@media not (-moz-pref("zen.view.use-single-toolbar")) {
+  /* URL bar position preference - TOP */
+@media (-moz-bool-pref: "wireframe.urlbar.position.top") {
+  #zen-appcontent-wrapper {
+    flex-direction: column;
+  }
+}
+
+/* URL bar position preference - BOTTOM (default) */
+@media not (-moz-bool-pref: "wireframe.urlbar.position.top") {
+  #zen-appcontent-wrapper {
+    flex-direction: column-reverse;
+  }
+
+  :root[zen-right-side="true"]:not([zen-compact-mode="true"]):not([inDOMFullscreen="true"]) #zen-tabbox-wrapper {
+    margin-top: var(--na-window-margin) !important;
+    margin-left: var(--na-window-margin) !important;
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  :root:not([zen-right-side="true"]):not([zen-compact-mode="true"]):not([inDOMFullscreen="true"]) #zen-tabbox-wrapper {
+    margin-top: var(--na-window-margin) !important;
+    margin-left: 0 !important;
+    margin-right: var(--na-window-margin) !important;
+    margin-bottom: 0 !important;
+  }
+}
+}
+
+
 #zen-appcontent-navbar-container {
   border: 0px solid var(--na-color-border) !important;
   border-radius: 0px !important;
@@ -148,33 +181,6 @@
   } */
 }
 
-/* URL bar position preference - TOP */
-@media (-moz-bool-pref: "wireframe.urlbar.position.top") {
-  #zen-appcontent-wrapper {
-    flex-direction: column;
-  }
-}
-
-/* URL bar position preference - BOTTOM (default) */
-@media not (-moz-bool-pref: "wireframe.urlbar.position.top") {
-  #zen-appcontent-wrapper {
-    flex-direction: column-reverse;
-  }
-
-  :root[zen-right-side="true"]:not([zen-compact-mode="true"]):not([inDOMFullscreen="true"]) #zen-tabbox-wrapper {
-    margin-top: var(--na-window-margin) !important;
-    margin-left: var(--na-window-margin) !important;
-    margin-right: 0 !important;
-    margin-bottom: 0 !important;
-  }
-
-  :root:not([zen-right-side="true"]):not([zen-compact-mode="true"]):not([inDOMFullscreen="true"]) #zen-tabbox-wrapper {
-    margin-top: var(--na-window-margin) !important;
-    margin-left: 0 !important;
-    margin-right: var(--na-window-margin) !important;
-    margin-bottom: 0 !important;
-  }
-}
 
 .tab-stack {
   box-shadow: none !important;

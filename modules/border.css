@@ -44,31 +44,62 @@ body > hbox {
 }
 
 /* window border on maximize */
-:root[sizemode="maximized"] #browser {
-  border: 2px solid var(--na-color-border) !important;
+:root[sizemode="maximized"] #browser::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid var(--na-color-border);
+  pointer-events: none;
+  z-index: 9999;
 }
 
 /* window border on minimize */
-:root[sizemode="normal"] #browser {
-  border: 2px solid var(--na-color-border) !important;
-  border-radius: var(--na-window-border-radius) !important;
-  outline: none !important;
-  outline-offset: 0px !important;
+:root[sizemode="normal"] #browser::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid var(--na-color-border);
+  border-radius: var(--na-window-border-radius);
+  pointer-events: none;
+  z-index: 9999;
 }
 
-:root[sizemode="fullscreen"] #browser {
+/* Tahoe shiny border */
+/* #zen-browser-background {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  z-index: 9999;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow:
+    inset 0 1px 2px rgba(255, 255, 255, 0.15),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.25),
+    0 0 0 1px rgba(0, 0, 0, 0.25),
+    0 4px 12px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.02)
+  );
+} */
+
+:root[sizemode="fullscreen"] #browser::before {
   border: 0 !important;
   border-radius: 0px !important;
   outline: none !important;
   outline-offset: 0px !important;
 }
 
-:root[inDOMFullscreen="true"] #browser {
+:root[inDOMFullscreen="true"] #browser::before {
   border: 0 !important;
   border-radius: 0px !important;
   outline: none !important;
   outline-offset: 0px !important;
 }
+
+
 
 /* Ensure all browser elements have squared corners */
 :root #browser,
@@ -136,14 +167,22 @@ body > hbox {
 
 /* window */
 #zen-tabbox-wrapper {
- box-shadow: none !important;
+  box-shadow: none !important;
   /*! background-color: var(--na-color-bg) !important; */
-  overflow: clip !important;
- padding: 0px !important;
- border-radius: 0 !important;
+  overflow: hidden !important;
+  padding: 0px !important;
+  background-clip: padding-box;
+  transform: translateZ(0);
 }
 
 /* WEBVIEW BORDER RADIUS */
+
+#tabbrowser-tabpanels{
+  overflow: clip;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 :root[zen-right-side="true"]:not([zen-compact-mode="true"]):not([inDOMFullscreen="true"]) #zen-tabbox-wrapper {
   border-radius: var(--na-user-border-radius) !important;
@@ -156,8 +195,12 @@ body > hbox {
 /* ADD WEBVIEW BORDER RADIUS TO CHILDREN ELEMENTS OF TABBOX */
 :root:not([zen-compact-mode="true"]){
   @media not (-moz-pref("wireframe.nogaps.enabled")){
-    #tabbrowser-tabpanels > *{
+    #tabbrowser-tabpanels{
       border-radius: var(--na-user-border-radius) !important;
+    }
+    
+    #tabbrowser-tabpanels > *{
+      border-radius: inherit !important;
       transition: border-radius 0.18s linear !important;
     }
   }

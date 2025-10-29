@@ -209,7 +209,47 @@
         "label": "Plane Shift"
       }
     ]
-  }
+  },
+  {
+    "type": "separator"
+  },
+  {
+    "type": "dropdown",
+    "label": "URLBar Opening Animation",
+    "property": "wireframe.urlbar-focus.effect",
+    "value": "string",
+    "defaultValue": "Hard Shift",
+    "options": [
+      {
+        "value": "Hard Shift",
+        "label": "Hard Shift"
+      },
+      {
+        "value": "Lights Off",
+        "label": "Lights Off"
+      },
+      {
+        "value": "Pushed Away",
+        "label": "Pushed Away"
+      },
+      {
+        "value": "Soft Fade",
+        "label": "Soft Fade"
+      },
+      {
+        "value": "Film Grain Blur",
+        "label": "Film Grain Blur"
+      },
+      {
+        "value": "Flash Bang",
+        "label": "Flash Bang"
+      },
+      {
+        "value": "CRT Snap",
+        "label": "CRT Snap"
+      }
+    ]
+  },
 
   {
     "type": "text",

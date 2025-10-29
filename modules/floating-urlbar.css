@@ -1270,7 +1270,7 @@
 
 
 /* === Default (Slide From Bottom) === */
-@media (-moz-pref("wireframe.urlbar-open.effect", "SlideFromBottom")) {
+@media (-moz-pref("wireframe.urlbar-open.effect", "Slide from Bottom")) {
   @keyframes slide-from-bottom {
     0% {
       opacity: 0;

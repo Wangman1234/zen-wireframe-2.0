@@ -181,7 +181,6 @@
 
 
 /* reduced height of floating sidebar for multiple/collapse toolbar */
-
 :root:not([zen-single-toolbar="true"])[zen-compact-mode="true"] #navigator-toolbox {
   height: calc(100% - 64px) !important;
   align-self: center !important;
@@ -200,6 +199,11 @@
   }
 }
 
+:root[zen-single-toolbar="true"][zen-compact-mode="true"] #navigator-toolbox {
+  height: calc(100% - 48px) !important;
+  align-self: center !important;
+  top: 0 !important;
+}
 
 @media (-moz-pref("zen.view.use-single-toolbar")) {
   :root[zen-compact-mode="true"] #navigator-toolbox {

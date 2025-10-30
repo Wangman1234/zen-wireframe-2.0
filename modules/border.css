@@ -120,10 +120,7 @@ body > hbox {
 }
 
 /* content window border radius */
-.browserSidebarContainer {
-    overflow: clip !important;
-    border-radius: var(--na-user-border-radius) !important;
-}
+
 
 :root:has([zen-compact-mode="true"]):has([zen-single-toolbar="true"]):not(
         [inDOMFullscreen="true"]

@@ -239,6 +239,12 @@ body > hbox {
     }
 }
 
+:root[inDOMFullscreen="true"] {
+    #tabbrowser-tabpanels {
+        border-radius: 0 !important;
+    }
+}
+
 /* SPLIT TABS */
 @media (-moz-pref("zen.view.use-single-toolbar")) {
     :root:has(

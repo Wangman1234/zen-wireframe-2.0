@@ -104,7 +104,7 @@
   }
 }
 
-#titlebar {
+/*#titlebar {
   flex-shrink: 0 !important;
   position: relative;
   z-index: 10;
@@ -113,7 +113,7 @@
 #zen-appcontent-navbar-container {
   min-width: 0 !important;
   flex: 0 0 auto !important;
-}
+}*/
 
 
 /* bottombar background transparent for expanded urlbar */

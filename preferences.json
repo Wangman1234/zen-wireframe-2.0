@@ -108,6 +108,16 @@
   },
   {
     "type": "checkbox",
+    "property": "wireframe.compact-sidebar.hide",
+    "label": "Hide compact sidebar on empty tab",
+    "value": "boolean",
+    "default": false
+  },
+  {
+    "type": "separator"
+  },
+  {
+    "type": "checkbox",
     "property": "wireframe.compact.siderbar.transparent",
     "label": "Make sidebar transparent in compact mode",
     "value": "boolean",

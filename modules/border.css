@@ -193,7 +193,6 @@ body > hbox {
 
 #tabbrowser-tabbox,
 #tabbrowser-tabbox > * {
-    overflow: clip !important;
     margin: 0 !important;
     padding: 0 !important;
     box-sizing: border-box !important;

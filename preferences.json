@@ -358,6 +358,26 @@
   },
   {
     "type": "checkbox",
+    "property": "wireframe.window.border",
+    "label": "Enable border around the browser window",
+    "value": "boolean",
+    "defaultValue": true
+  },
+  {
+    "type": "separator"
+  },
+  {
+    "type": "checkbox",
+    "property": "wireframe.webview.border",
+    "label": "Enable border around the webview",
+    "value": "boolean",
+    "defaultValue": true
+  },
+  {
+    "type": "separator"
+  },
+  {
+    "type": "checkbox",
     "property": "zen.theme.essentials-favicon-bg",
     "label": "Enable favicon gradient background for essentials",
     "value": "boolean",

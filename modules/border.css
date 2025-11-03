@@ -43,25 +43,42 @@ body > hbox {
     /* background: var(--na-color-bg) !important; */
 }
 
-/* window border on maximize */
-:root[sizemode="maximized"] #browser::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border: 2px solid var(--na-color-border);
-    pointer-events: none;
-    z-index: 9999;
+/* ====== WINDOW BORDERS */
+@media (-moz-pref("wireframe.window.border")){
+    /* window border on maximize */
+    :root[sizemode="maximized"] #browser::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border: 2px solid var(--na-color-border);
+        pointer-events: none;
+        z-index: 9999;
+    }
+
+    /* window border on minimize */
+    :root[sizemode="normal"] #browser::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border: 2px solid var(--na-color-border);
+        border-radius: var(--na-window-border-radius);
+        pointer-events: none;
+        z-index: 9999;
+    }
 }
 
-/* window border on minimize */
-:root[sizemode="normal"] #browser::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border: 2px solid var(--na-color-border);
-    border-radius: var(--na-window-border-radius);
-    pointer-events: none;
-    z-index: 9999;
+:root[sizemode="fullscreen"] #browser::before {
+    border: 0 !important;
+    border-radius: 0px !important;
+    outline: none !important;
+    outline-offset: 0px !important;
+}
+
+:root[inDOMFullscreen="true"] #browser::before {
+    border: 0 !important;
+    border-radius: 0px !important;
+    outline: none !important;
+    outline-offset: 0px !important;
 }
 
 /* Tahoe shiny border */
@@ -84,21 +101,6 @@ body > hbox {
     rgba(255, 255, 255, 0.02)
   );
 } */
-
-:root[sizemode="fullscreen"] #browser::before {
-    border: 0 !important;
-    border-radius: 0px !important;
-    outline: none !important;
-    outline-offset: 0px !important;
-}
-
-:root[inDOMFullscreen="true"] #browser::before {
-    border: 0 !important;
-    border-radius: 0px !important;
-    outline: none !important;
-    outline-offset: 0px !important;
-}
-
 /* Ensure all browser elements have squared corners */
 :root #browser,
 :root body * {
@@ -133,20 +135,23 @@ body > hbox {
     border-radius: 0 !important;
 }
 
-/* content window border size on RIGHT side tabbar */
-:root[zen-right-side="true"]:not([zen-compact-mode="true"]):not(
-        [inDOMFullscreen="true"]
-    )
-    #zen-tabbox-wrapper {
-    border: 2px solid var(--na-color-border) !important;
-}
+/* ====== WEBVIEW BORDER ====== */
+@media (-moz-pref("wireframe.webview.border")){
+    /* content window border size on RIGHT side tabbar */
+    :root[zen-right-side="true"]:not([zen-compact-mode="true"]):not(
+            [inDOMFullscreen="true"]
+        )
+        #zen-tabbox-wrapper {
+        border: 2px solid var(--na-color-border) !important;
+    }
 
-/* content window border size on LEFT side tabbar */
-:root:not([zen-right-side="true"]):not([zen-compact-mode="true"]):not(
-        [inDOMFullscreen="true"]
-    )
-    #zen-tabbox-wrapper {
-    border: 2px solid var(--na-color-border) !important;
+    /* content window border size on LEFT side tabbar */
+    :root:not([zen-right-side="true"]):not([zen-compact-mode="true"]):not(
+            [inDOMFullscreen="true"]
+        )
+        #zen-tabbox-wrapper {
+        border: 2px solid var(--na-color-border) !important;
+    }
 }
 
 /* remove content window border on split tabs*/

@@ -137,66 +137,7 @@
   background-color: var(--na-color-zero) !important;
 }
 
-#urlbar[breakout-extend] :root:has(.urlbar-page-action[open]) #urlbar-background,
-#urlbar[breakout-extend] .urlbar-background,
-#urlbar[breakout-extend] #urlbar-container {
-  background-color: var(--zen-primary-color) !important;
-  border: 2px solid var(--na-color-border) !important;
-}
-
-/* urlbar border radius */
-#urlbar-background,
-#urlbar {
-  border-radius: var(--na-tab-border-radius) !important;
-}
-
-/* bottombar left icon padding */
-:root[zen-compact-mode="false"] #urlbar-container:not(:has(#urlbar[breakout][breakout-extend])) #identity-icon-box {
-  padding-inline: 6px !important;
-}
-
-:root[zen-compact-mode="true"] #urlbar-container:not(:has(#urlbar[breakout][breakout-extend])) #identity-icon-box {
-  padding-inline: 4px !important;
-}
-
-/* splitter for urlbar input */
-.urlbarView-body-inner {
-  border-top: none !important;
-  border-bottom: 1px solid var(--na-color-border) !important;
-}
-
-/* urlbar loading text */
-#urlbar>.urlbar-input-container>.urlbar-input-box::before {
-  content: "wireframing..." !important;
-  padding-inline: 10px !important;
-  animation: slideUpAdressBar var(--na-anim-duration) ease;
-  animation-play-state: paused;
-  transition: opacity 0.6s;
-  align-self: center;
-  visibility: collapse !important;
-  opacity: 0;
-}
-
-#urlbar:not([breakout-extend]) .urlbar-input-container>.urlbar-input-box>input {
-  opacity: 1 !important;
-  transition: opacity 0.6s;
-}
-
-#main-window:has(.tabbrowser-tab[selected][busy]) #urlbar:not([breakout-extend]) .urlbar-input-container>.urlbar-input-box>input {
-  transition: opacity 3s ease;
-  opacity: 0 !important;
-}
-
-#main-window:has(.tabbrowser-tab[selected][busy]) #urlbar:not([breakout-extend]) .urlbar-input-container>.urlbar-input-box::before {
-  animation-play-state: running;
-  visibility: visible !important;
-  opacity: 1;
-}
-
 /* urlbar loading */
-#urlbar {
-  color: var(--na-color-text) !important;
-}
 
 #urlbar .urlbar-input-container::before {
   content: "";

@@ -504,14 +504,14 @@ zen-folder {
 }
 
 /* workspace hover */
-:root[zen-sidebar-expanded="true"] #zen-current-workspace-indicator:hover::before {
+/* :root[zen-sidebar-expanded="true"] #zen-current-workspace-indicator:hover::before {
   background: var(--na-color-text) !important;
   border-radius: var(--na-border-radius) !important;
 }
 
 :root[zen-sidebar-expanded="true"] #zen-current-workspace-indicator:hover>#zen-current-workspace-indicator-name {
   color: var(--na-color-bg) !important;
-}
+} */
 
 /* sidebar bottom icon padding and direction */
 #zen-sidebar-icons-wrapper {
@@ -544,10 +544,10 @@ zen-folder {
 
 /* === AUDIO INDICATOR == */
 
-.tab-audio-button {
+/* .tab-audio-button {
   color: var(--na-color-bg) !important;
 }
-
+ */
 /* === TRANSPARENT COMPACT SIDEBAR === */
 /* :root[zen-compact-mode="true"] #titlebar{
   backdrop-filter: blur(20px) !important;

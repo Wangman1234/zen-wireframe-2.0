@@ -123,6 +123,26 @@
     "value": "boolean",
     "default": false
   },
+  {
+    "type": "separator"
+  },
+  {
+    "type": "checkbox",
+    "property": "wireframe.nogaps.enabled",
+    "label": "Enable no gap for single-toolbar",
+    "value": "boolean",
+    "default": false
+  },
+  {
+    "type": "separator"
+  },
+  {
+    "type": "checkbox",
+    "property": "wireframe.nogaps.border.enabled",
+    "label": "Show splitter (for no gaps mod)",
+    "value": "boolean",
+    "default": false
+  },
 
   {
     "type": "text",
@@ -349,7 +369,7 @@
 
   {
     "type": "text",
-    "label": "Visual Elements",
+    "label": "Tab Settings",
     "margin": "30px 0 20px 0",
     "size": "25px"
   },
@@ -358,20 +378,20 @@
   },
   {
     "type": "checkbox",
-    "property": "wireframe.window.border",
-    "label": "Enable border around the browser window",
+    "property": "wireframe.new-tab.label",
+    "label": "Enable custom new tab label",
     "value": "boolean",
-    "defaultValue": true
+    "default": true
   },
   {
     "type": "separator"
   },
   {
     "type": "checkbox",
-    "property": "wireframe.webview.border",
-    "label": "Enable border around the webview",
+    "property": "wireframe.new-tab.reveal.animation",
+    "label": "Enable reveal on hover animation for new tab",
     "value": "boolean",
-    "defaultValue": true
+    "default": true
   },
   {
     "type": "separator"
@@ -417,30 +437,52 @@
     "type": "separator"
   },
   {
-    "type": "checkbox",
-    "property": "wireframe.nogaps.enabled",
-    "label": "Enable no gap for single-toolbar",
-    "value": "boolean",
-    "default": false
+    "type": "dropdown",
+    "property": "wireframe.tab-loading.animation",
+    "label": "Tab loading animation options",
+    "value": "string",
+    "defaultValue": "both",
+    "options": [
+      {
+        "value": "loadbar",
+        "label": "Loading Bar"
+      },
+      {
+        "value": "tab-bg-loading",
+        "label": "Tab Background Progress Bar"
+      },
+      {
+        "value": "both",
+        "label": "Both"
+      }
+    ]
   },
-  {
-    "type": "separator"
-  },
-  {
-    "type": "checkbox",
-    "property": "wireframe.nogaps.border.enabled",
-    "label": "Show splitter (for no gaps mod)",
-    "value": "boolean",
-    "default": false
-  },
-  {
-    "type": "separator"
-  },
+  
   {
     "type": "text",
-    "label": "Border Radius Controls",
+    "label": "Border Settings",
     "margin": "30px 0 20px 0",
     "size": "25px"
+  },
+  {
+    "type": "separator"
+  },
+  {
+    "type": "checkbox",
+    "property": "wireframe.window.border",
+    "label": "Enable border around the browser window",
+    "value": "boolean",
+    "defaultValue": true
+  },
+  {
+    "type": "separator"
+  },
+  {
+    "type": "checkbox",
+    "property": "wireframe.webview.border",
+    "label": "Enable border around the webview",
+    "value": "boolean",
+    "defaultValue": true
   },
   {
     "type": "separator"

@@ -219,7 +219,7 @@ body > hbox {
 
 /* ADD WEBVIEW BORDER RADIUS TO CHILDREN ELEMENTS OF TABBOX */
 :root:not([zen-compact-mode="true"]) {
-    @media not (-moz-pref("wireframe.nogaps.enabled")) {
+/*     @media not (-moz-pref("wireframe.nogaps.enabled")) { */
         #tabbrowser-tabpanels {
             border-radius: var(--na-user-border-radius) !important;
         }
@@ -228,7 +228,7 @@ body > hbox {
             border-radius: inherit !important;
             transition: border-radius 0.18s linear !important;
         }
-    }
+/*     } */
 }
 
 :root:has([zen-compact-mode="true"]):has([sizemode="normal"])
@@ -462,55 +462,41 @@ body > hbox {
 
 /* === NO GAPS === */
 
-@media (-moz-pref("zen.view.use-single-toolbar")) {
-    @media (-moz-pref("wireframe.nogaps.enabled")) {
-        :root {
-            --zen-element-separation: 0px !important;
+@media (-moz-pref("wireframe.nogaps.enabled")){
+    :root[zen-single-toolbar="true"]{
+        --zen-element-separation: 0px !important;
+    }
+    
+    :root[zen-single-toolbar="true"]:not([zen-right-side="true"]):not([zen-compact-mode="true"]){
+        #zen-tabbox-wrapper,
+        #tabbrowser-tabbox,
+        #tabbrowser-tabpanels,
+        #tabbrowser-tabpanels > * {
+            border-top-left-radius: 0px !important;
+            border-bottom-left-radius: 0px !important;
         }
-
-        :root:not([zen-right-side="true"]):not([zen-compact-mode="true"]):not(
-                [inDOMFullscreen="true"]
-            )
-            #zen-tabbox-wrapper {
-            margin: 0 !important;
-            border-radius: var(--na-window-border-radius) !important;
-            border: none !important;
+        
+        #zen-tabbox-wrapper{
+            border: 0.1px solid transparent !important;
         }
-
-        :root:not([zen-right-side="false"]):not([zen-compact-mode="true"]):not(
-                [inDOMFullscreen="true"]
-            )
-            #zen-tabbox-wrapper {
-            margin: 0 !important;
-            border-radius: var(--na-window-border-radius) !important;
-            border: none !important;
+    }
+    
+    :root[zen-single-toolbar="true"][zen-right-side="true"]:not([zen-compact-mode="true"]){
+        #zen-tabbox-wrapper,
+        #tabbrowser-tabbox,
+        #tabbrowser-tabpanels,
+        #tabbrowser-tabpanels > * {
+            border-top-right-radius: 0px !important;
+            border-bottom-right-radius: 0px !important;
         }
-
-        /* sidebar on the RIGHT → kill right corners */
-        :root[zen-right-side="true"]:not([zen-compact-mode="true"]):not(
-                [inDOMFullscreen="true"]
-            )
-            #zen-tabbox-wrapper {
-            border-top-right-radius: 0 !important;
-            border-bottom-right-radius: 0 !important;
+        
+        #zen-tabbox-wrapper{
+            border: 0.1px solid transparent !important;
         }
-
-        /* sidebar on the LEFT → kill left corners */
-        :root:not([zen-right-side="true"]):not([zen-compact-mode="true"]):not(
-                [inDOMFullscreen="true"]
-            )
-            #zen-tabbox-wrapper {
-            border-top-left-radius: 0 !important;
-            border-bottom-left-radius: 0 !important;
-        }
-
-        /*     :root[zen-single-toolbar="true"]:not([customizing]) {
-      & #zen-appcontent-navbar-wrapper {
-        margin-block: -10px !important;
-      }
-    } */
     }
 }
+
+
 
 /* fix for transparent blank page */
 .browserStack {

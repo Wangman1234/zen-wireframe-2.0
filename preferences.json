@@ -463,7 +463,7 @@
   {
     "type": "dropdown",
     "property": "wireframe.tab-switch.animation",
-    "label": "Tab loading animation options",
+    "label": "Tab switching animation options",
     "value": "string",
     "defaultValue": "Vertical Veil",
     "options": [

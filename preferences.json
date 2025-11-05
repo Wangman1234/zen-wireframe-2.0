@@ -457,7 +457,47 @@
       }
     ]
   },
-  
+  {
+    "type": "separator"
+  },
+  {
+    "type": "dropdown",
+    "property": "wireframe.tab-switch.animation",
+    "label": "Tab loading animation options",
+    "value": "string",
+    "defaultValue": "Vertical Veil",
+    "options": [
+      {
+        "value": "Vertical Veil",
+        "label": "Vertical Veil"
+      },
+      {
+        "value": "Clean Sever",
+        "label": "Clean Sever"
+      },
+      {
+        "value": "Blurry Dreams",
+        "label": "Blurry Dreams"
+      },
+      {
+        "value": "Prism Shatter",
+        "label": "Prism Shatter"
+      },
+      {
+        "value": "Hard Cut",
+        "label": "Hard Cut"
+      },
+      {
+        "value": "Monolith Slide",
+        "label": "Monolith Slide"
+      },
+      {
+        "value": "Monolith Slide",
+        "label": "Monolith Slide"
+      }
+    ]
+  },
+
   {
     "type": "text",
     "label": "Border Settings",

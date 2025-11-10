@@ -3,14 +3,14 @@
 /* === TAB SWITCHING ANIMATIONS === */
 
 @media (-moz-pref("wireframe.tab-switch.animation","Vertical Veil")){
-  #browser #tabbrowser-tabpanels > .browserSidebarContainer {
+  #browser #tabbrowser-tabpanels:not([zen-split-view="true"]) > .browserSidebarContainer {
     opacity: 0 !important;
     mask-image: linear-gradient(to bottom, transparent 0%, black 60%);
     transform: translateY(12px) !important;
     transition: none !important;
   }
 
-  #browser #tabbrowser-tabpanels > .browserSidebarContainer.deck-selected {
+  #browser #tabbrowser-tabpanels:not([zen-split-view="true"]) > .browserSidebarContainer.deck-selected {
     opacity: 1 !important;
     mask-image: none;
     transform: translateY(0) !important;
@@ -21,14 +21,14 @@
 }
 
 @media (-moz-pref("wireframe.tab-switch.animation","Clean Sever")){
-  #browser #tabbrowser-tabpanels > .browserSidebarContainer {
+  #browser #tabbrowser-tabpanels:not([zen-split-view="true"]) > .browserSidebarContainer {
     opacity: 0;
     transform: translateX(32px) scale(1.04);
     filter: contrast(140%) saturate(0%);
     transition: none !important;
   }
 
-  #browser #tabbrowser-tabpanels > .browserSidebarContainer.deck-selected {
+  #browser #tabbrowser-tabpanels:not([zen-split-view="true"]) > .browserSidebarContainer.deck-selected {
     opacity: 1;
     transform: translateX(0) scale(1);
     filter: none;
@@ -41,14 +41,14 @@
 }
 
 @media(-moz-pref("wireframe.tab-switch.animation","Blurry Dreams")){
-  #browser #tabbrowser-tabpanels > .browserSidebarContainer {
+  #browser #tabbrowser-tabpanels:not([zen-split-view="true"]) > .browserSidebarContainer {
     opacity: 0 !important;
     filter: blur(10px) saturate(0.8);
     transform: translateX(-10px) scale(0.98);
     transition: none !important;
   }
 
-  #browser #tabbrowser-tabpanels > .browserSidebarContainer.deck-selected {
+  #browser #tabbrowser-tabpanels:not([zen-split-view="true"]) > .browserSidebarContainer.deck-selected {
     opacity: 1 !important;
     filter: blur(0px) saturate(1);
     transform: translateX(0) scale(1);
@@ -59,13 +59,13 @@
 }
 
 @media (-moz-pref("wireframe.tab-switch.animation","Prism Shatter")){
-  #browser #tabbrowser-tabpanels > .browserSidebarContainer {
+  #browser #tabbrowser-tabpanels:not([zen-split-view="true"]) > .browserSidebarContainer {
     opacity: 0;
     transform: scale(1.07) translateY(-6px);
     filter: brightness(140%) saturate(1.3);
     transition: none !important;
   }
-  #browser #tabbrowser-tabpanels > .browserSidebarContainer.deck-selected {
+  #browser #tabbrowser-tabpanels:not([zen-split-view="true"]) > .browserSidebarContainer.deck-selected {
     opacity: 1;
     transform: scale(1) translateY(0);
     filter: none;
@@ -76,13 +76,13 @@
 }
 
 @media (-moz-pref("wireframe.tab-switch.animation","Hard Cut")){
-  #browser #tabbrowser-tabpanels > .browserSidebarContainer {
+  #browser #tabbrowser-tabpanels:not([zen-split-view="true"]) > .browserSidebarContainer {
     opacity: 0;
     filter: brightness(60%) contrast(200%);
     transform: translateY(-4px) scale(.98);
     transition: none !important;
   }
-  #browser #tabbrowser-tabpanels > .browserSidebarContainer.deck-selected {
+  #browser #tabbrowser-tabpanels:not([zen-split-view="true"]) > .browserSidebarContainer.deck-selected {
     opacity: 1;
     filter: none;
     transform: translateY(0) scale(1);
@@ -93,13 +93,13 @@
 }
 
 @media (-moz-pref("wireframe.tab-switch.animation","Monolith Slide")){
-  #browser #tabbrowser-tabpanels > .browserSidebarContainer {
+  #browser #tabbrowser-tabpanels:not([zen-split-view="true"]) > .browserSidebarContainer {
     opacity: 0;
     transform: translateX(-20px) scale(1.02);
     filter: grayscale(100%) contrast(140%);
     transition: none !important;
   }
-  #browser #tabbrowser-tabpanels > .browserSidebarContainer.deck-selected {
+  #browser #tabbrowser-tabpanels:not([zen-split-view="true"]) > .browserSidebarContainer.deck-selected {
     opacity: 1;
     transform: translateX(0) scale(1);
     filter: none;
@@ -110,13 +110,13 @@
 }
 
 @media (-moz-pref("wireframe.tab-switch.animation","Film Dissolve")){
-  #browser #tabbrowser-tabpanels > .browserSidebarContainer {
+  #browser #tabbrowser-tabpanels:not([zen-split-view="true"]) > .browserSidebarContainer {
     opacity: .6 !important;
     filter: blur(2px) contrast(.8) !important;
     transition: none !important;
   }
 
-  #browser #tabbrowser-tabpanels > .browserSidebarContainer.deck-selected {
+  #browser #tabbrowser-tabpanels:not([zen-split-view="true"]) > .browserSidebarContainer.deck-selected {
     opacity: 1 !important;
     filter: blur(0) contrast(1) !important;
     transition: opacity .25s ease,

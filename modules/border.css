@@ -112,17 +112,28 @@ body > hbox {
 }
 
 /* window border on spit tabs */
-:root:has(#tabbrowser-tabpanels [zen-split]) .deck-selected {
+/* :root:has(#tabbrowser-tabpanels [zen-split]) .deck-selected {
     border-radius: 0px !important;
     border: 2px solid var(--na-color-border) !important;
+} */
+
+:root:has(#tabbrowser-tabpanels [zen-split]) #tabbrowser-tabpanels > * {
+    border-radius: 0 !important;
 }
 
+/* :root:has(#tabbrowser-tabpanels [zen-split]) .deck-selected {
+    border-radius: var(--na-window-border-radius) !important;
+} */
+
 :root:has(#tabbrowser-tabpanels [zen-split]) .browserSidebarContainer {
-    border-radius: 0px !important;
+    box-shadow: none !important;
+}
+
+:root:has(#tabbrowser-tabpanels [zen-split]) .browserSidebarContainer[is-zen-split="true"] {
+    margin: 0 0 !important;
 }
 
 /* content window border radius */
-
 
 :root:has([zen-compact-mode="true"]):has([zen-single-toolbar="true"]):not(
         [inDOMFullscreen="true"]
@@ -155,9 +166,9 @@ body > hbox {
 }
 
 /* remove content window border on split tabs*/
-:root:has(#tabbrowser-tabpanels [zen-split]) #zen-tabbox-wrapper {
+/* :root:has(#tabbrowser-tabpanels [zen-split]) #zen-tabbox-wrapper {
     border: none !important;
-}
+} */
 
 /* content window bottom margin on SINGLE-TOOLBAR mode */
 /* @media (-moz-bool-pref: "zen.view.use-single-toolbar") {
@@ -249,24 +260,6 @@ body > hbox {
     }
 }
 
-/* SPLIT TABS */
-@media (-moz-pref("zen.view.use-single-toolbar")) {
-    :root:has(
-            #tabbrowser-tabpanels [zen-split]
-        )[zen-compact-mode="true"][zen-sidebar-expanded="true"]
-        #zen-tabbox-wrapper {
-        margin: var(--na-window-margin) !important;
-    }
-
-    :root:has(#tabbrowser-tabpanels [zen-split])[zen-compact-mode="true"]:not(
-            [zen-sidebar-expanded="true"]
-        )
-        #zen-tabbox-wrapper {
-        margin-inline: var(--na-window-margin) !important;
-        margin-top: var(--na-window-margin) !important;
-        margin-bottom: 0px !important;
-    }
-}
 
 /* NO GAPS COMPACT MODE (DEFAULT) */
 

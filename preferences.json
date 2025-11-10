@@ -143,6 +143,16 @@
     "value": "boolean",
     "default": false
   },
+  {
+    "type": "separator"
+  },
+  {
+    "type": "checkbox",
+    "property": "wireframe.pinned-ext.enabled",
+    "label": "Enable pinned extensions",
+    "value": "boolean",
+    "default": false
+  },
 
   {
     "type": "text",

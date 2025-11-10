@@ -397,8 +397,19 @@
       font-size: 1em !important;
     }
 
-    #urlbar-container:has(#urlbar[breakout-extend]) #urlbar-results img {
-      display: none !important;
+    /* Hide/style website icons based on preferences */
+    @media (-moz-bool-pref: "wireframe.urlbar.icons.hide") {
+      #urlbar-container:has(#urlbar[breakout-extend]) #urlbar-results img {
+        display: none !important;
+      }
+    }
+
+    @media not (-moz-bool-pref: "wireframe.urlbar.icons.hide") {
+      @media (-moz-bool-pref: "wireframe.urlbar.icons.greyscale") {
+        #urlbar-container:has(#urlbar[breakout-extend]) #urlbar-results img {
+          filter: grayscale(100%) !important;
+        }
+      }
     }
 
     #urlbar-container:has(#urlbar[breakout-extend]) .urlbarView-results div {
@@ -706,8 +717,19 @@
       font-size: 1em !important;
     }
 
-    #urlbar-container:has(#urlbar[breakout-extend]) #urlbar-results img {
-      display: none !important;
+    /* Hide/style website icons based on preferences */
+    @media (-moz-bool-pref: "wireframe.urlbar.icons.hide") {
+      #urlbar-container:has(#urlbar[breakout-extend]) #urlbar-results img {
+        display: none !important;
+      }
+    }
+
+    @media not (-moz-bool-pref: "wireframe.urlbar.icons.hide") {
+      @media (-moz-bool-pref: "wireframe.urlbar.icons.greyscale") {
+        #urlbar-container:has(#urlbar[breakout-extend]) #urlbar-results img {
+          filter: grayscale(100%) !important;
+        }
+      }
     }
 
     #urlbar-container:has(#urlbar[breakout-extend]) .urlbarView-results div {
@@ -835,8 +857,19 @@
      display: none !important;
     }
 
-    #urlbar-container:has(#urlbar[breakout-extend]) #urlbar-results img {
-      display: none !important;
+    /* Hide/style website icons based on preferences */
+    @media (-moz-bool-pref: "wireframe.urlbar.icons.hide") {
+      #urlbar-container:has(#urlbar[breakout-extend]) #urlbar-results img {
+        display: none !important;
+      }
+    }
+
+    @media not (-moz-bool-pref: "wireframe.urlbar.icons.hide") {
+      @media (-moz-bool-pref: "wireframe.urlbar.icons.greyscale") {
+        #urlbar-container:has(#urlbar[breakout-extend]) #urlbar-results img {
+          filter: grayscale(100%) !important;
+        }
+      }
     }
   }
 }
@@ -975,8 +1008,19 @@
       font-size: 1em !important;
     }
 
-    #urlbar-container:has(#urlbar[breakout-extend]) #urlbar-results img {
-      display: none !important;
+    /* Hide/style website icons based on preferences */
+    @media (-moz-bool-pref: "wireframe.urlbar.icons.hide") {
+      #urlbar-container:has(#urlbar[breakout-extend]) #urlbar-results img {
+        display: none !important;
+      }
+    }
+
+    @media not (-moz-bool-pref: "wireframe.urlbar.icons.hide") {
+      @media (-moz-bool-pref: "wireframe.urlbar.icons.greyscale") {
+        #urlbar-container:has(#urlbar[breakout-extend]) #urlbar-results img {
+          filter: grayscale(100%) !important;
+        }
+      }
     }
 
     #urlbar-container:has(#urlbar[breakout-extend]) .urlbarView-results div {
@@ -1285,8 +1329,19 @@
       font-size: 1em !important;
     }
 
-    #urlbar-container:has(#urlbar[breakout-extend]) #urlbar-results img {
-      display: none !important;
+    /* Hide/style website icons based on preferences */
+    @media (-moz-bool-pref: "wireframe.urlbar.icons.hide") {
+      #urlbar-container:has(#urlbar[breakout-extend]) #urlbar-results img {
+        display: none !important;
+      }
+    }
+
+    @media not (-moz-bool-pref: "wireframe.urlbar.icons.hide") {
+      @media (-moz-bool-pref: "wireframe.urlbar.icons.greyscale") {
+        #urlbar-container:has(#urlbar[breakout-extend]) #urlbar-results img {
+          filter: grayscale(100%) !important;
+        }
+      }
     }
 
     #urlbar-container:has(#urlbar[breakout-extend]) .urlbarView-results div {
@@ -1419,8 +1474,19 @@
      display: none !important;
     } */
 
-    #urlbar-container:has(#urlbar[breakout-extend]) #urlbar-results img {
-      display: none !important;
+    /* Hide/style website icons based on preferences */
+    @media (-moz-bool-pref: "wireframe.urlbar.icons.hide") {
+      #urlbar-container:has(#urlbar[breakout-extend]) #urlbar-results img {
+        display: none !important;
+      }
+    }
+
+    @media not (-moz-bool-pref: "wireframe.urlbar.icons.hide") {
+      @media (-moz-bool-pref: "wireframe.urlbar.icons.greyscale") {
+        #urlbar-container:has(#urlbar[breakout-extend]) #urlbar-results img {
+          filter: grayscale(100%) !important;
+        }
+      }
     }
   }
 }

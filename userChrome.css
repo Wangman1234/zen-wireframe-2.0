@@ -15,3 +15,5 @@
 @import url("modules/media.css");
 @import url("modules/blank-page.css");
 @import url("modules/floating-urlbar.css");
+@import url("modules/normal-urlbar.css");
+@import url("modules/pinned-extensions.css");

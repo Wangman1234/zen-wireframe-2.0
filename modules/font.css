@@ -20,6 +20,10 @@
     :root {
         --wireframe-font: "SUSEMono";
     }
+    
+    #titlebar .zen-current-workspace-indicator > label{
+        padding-top: 2px !important;
+    }
 }
 
 @media (-moz-pref("wireframe.font", "Bricolage")) {
@@ -32,11 +36,19 @@
     :root {
         --wireframe-font: "GeistMono";
     }
+    
+    #titlebar .zen-current-workspace-indicator > label{
+        padding-top: 2px !important;
+    }
 }
 
 @media (-moz-pref("wireframe.font", "JetBrainsMono")) {
     :root {
         --wireframe-font: "JetBrainsMono";
+    }
+    
+    #titlebar .zen-current-workspace-indicator > label{
+        padding-top: 2px !important;
     }
 }
 

@@ -40,11 +40,11 @@
 @media (-moz-pref("wireframe.nogaps.enabled")){
     @media (-moz-pref("wireframe.nogaps.border.enabled")){
         :root:not([zen-right-side],[zen-compact-mode="true"])[zen-sidebar-expanded="true"] #zen-sidebar-splitter {
-          border-right: 1px solid var(--na-color-border) !important;
+          border-right: 2px solid var(--na-color-border) !important;
         }
 
         :root:not([zen-compact-mode="true"])[zen-right-side][zen-sidebar-expanded="true"] #zen-sidebar-splitter {
-          border-left: 1px solid var(--na-color-border) !important;
+          border-left: 2px solid var(--na-color-border) !important;
         }
     }
 }
@@ -358,11 +358,98 @@
   border-radius: var(--na-user-border-radius) !important;
 }
 
-@media not (-moz-bool-pref: "wireframe.urlbar.position.top"){
+/* @media not (-moz-bool-pref: "wireframe.urlbar.position.top"){
   #titlebar{
     padding-top: 10px !important;
   }
+} */
+
+/* === WORKSPACE INDICATOR REVEAL ON HOVER === */
+
+#titlebar .zen-current-workspace-indicator > hbox{
+  visibility: collapse !important;
+  opacity: 0.0 !important;
+  transform: translateX(-4px) scale(0.92);
+  transition:
+    opacity 0.22s ease,
+    transform 0.26s cubic-bezier(.25,.8,.25,1) !important;
+  pointer-events: none;
 }
+
+#titlebar .zen-current-workspace-indicator > label{
+  font-size: var(--wireframe-font-size) !important;
+  margin-left: -10px !important;
+  transition: margin-left 0.26s cubic-bezier(.25,.8,.25,1) !important;
+}
+
+.zen-current-workspace-indicator:before{
+  background: transparent !important;
+}
+
+:root:has(#titlebar .zen-current-workspace-indicator:hover){
+  #titlebar .zen-current-workspace-indicator > hbox{
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: translateX(0) scale(1);
+  }
+  
+  #titlebar .zen-current-workspace-indicator > label{
+    margin-left: 0px !important;
+  }
+}
+
+/* === Changed new tab label === */
+
+@media (-moz-pref("wireframe.new-tab.label")){
+  #tabs-newtab-button .toolbarbutton-text::before {
+    content: "Where to?"; 
+  }
+
+  #tabs-newtab-button[in-urlbar="true"] .toolbarbutton-text::before {
+    content: "okay, spill"; 
+  }
+}
+
+/* === NEW TAB REVEAL ON HOVER ANIMATION === */
+
+@media (-moz-pref("wireframe.new-tab.reveal.animation")){
+  /* Base hidden state */
+  #tabs-newtab-button:not([in-urlbar="true"]) .toolbarbutton-text {
+    opacity: 0 !important;
+    visibility: collapse !important;
+    max-width: 0;
+    overflow: hidden;
+    transition: opacity .22s ease, max-width .22s ease;
+  }
+
+  /* Hover reveal */
+  #tabs-newtab-button:not([in-urlbar="true"]):hover .toolbarbutton-text {
+    opacity: 1 !important;
+    visibility: visible !important;
+    max-width: 100px;
+  }
+
+  /* Slide icon left on hover */
+  #tabs-newtab-button:not([in-urlbar="true"]) .toolbarbutton-icon {
+    transition: transform .25s ease;
+  }
+
+  #tabs-newtab-button:not([in-urlbar="true"]):hover .toolbarbutton-icon {
+    transform: translateX(-6px);
+  }
+
+  #tabs-newtab-button:not([in-urlbar="true"]) .toolbarbutton-icon {
+    transition: transform .25s cubic-bezier(.25, .1, .25, 1);
+    transform-origin: center;
+  }
+
+  /* Hover: slide + rotate */
+  #tabs-newtab-button:not([in-urlbar="true"]):hover .toolbarbutton-icon {
+    transform: translateX(-6px) rotate(180deg);
+  }
+}
+
+/* sidebar border */
 
 :root[zen-compact-mode="true"] #titlebar {
   border: 1px solid var(--na-color-border) !important;

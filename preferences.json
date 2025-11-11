@@ -290,6 +290,26 @@
       }
     ]
   },
+  {
+    "type": "separator"
+  },
+  {
+    "type": "checkbox",
+    "property": "wireframe.urlbar.icons.hide",
+    "label": "Hide website icons in URL bar results",
+    "value": "boolean",
+    "default": true
+  },
+  {
+    "type": "separator"
+  },
+  {
+    "type": "checkbox",
+    "property": "wireframe.urlbar.icons.greyscale",
+    "label": "Make website icons greyscale in URL bar results",
+    "value": "boolean",
+    "default": false
+  },
 
   {
     "type": "text",

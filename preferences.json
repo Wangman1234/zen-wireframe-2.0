@@ -98,6 +98,16 @@
   },
   {
     "type": "checkbox",
+    "property": "wireframe.sidebar-foot.hide",
+    "label": "Hide sidebar foot buttons",
+    "value": "boolean",
+    "default": true
+  },
+  {
+    "type": "separator"
+  },
+  {
+    "type": "checkbox",
     "property": "wireframe.statusbar.disable",
     "label": "Disable status bar",
     "value": "boolean",

@@ -165,6 +165,25 @@ body > hbox {
     }
 }
 
+/* fix for overflowing borders when webview border is off */
+@media not (-moz-pref("wireframe.webview.border")){
+    /* content window border size on RIGHT side tabbar */
+    :root[zen-right-side="true"]:not([zen-compact-mode="true"]):not(
+            [inDOMFullscreen="true"]
+        )
+        #zen-tabbox-wrapper {
+        border: 0.1px solid transparent !important;
+    }
+
+    /* content window border size on LEFT side tabbar */
+    :root:not([zen-right-side="true"]):not([zen-compact-mode="true"]):not(
+            [inDOMFullscreen="true"]
+        )
+        #zen-tabbox-wrapper {
+        border: 0.1px solid transparent !important;
+    }
+}
+
 /* remove content window border on split tabs*/
 /* :root:has(#tabbrowser-tabpanels [zen-split]) #zen-tabbox-wrapper {
     border: none !important;

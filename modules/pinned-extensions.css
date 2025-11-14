@@ -12,16 +12,18 @@
   flex-direction: column;
 } 
 
-:root[zen-single-toolbar="true"] #nav-bar {
-  margin-bottom: 13px !important; /* Adjust gap between urlbar and extensions */
-}
+/* Adjust gap between urlbar and extensions */
+  
+/* :root[zen-single-toolbar="true"] #nav-bar {
+  margin-bottom: 13px !important; 
+} */
 
 /* Pinned extensions */
 #TabsToolbar-customization-target {
   display: flex !important;
-  flex-direction: row !important;
+  flex-direction:  row !important;
   flex-wrap: wrap !important;
-  gap: calc(var(--zen-toolbox-padding) - 3px) !important;
+  gap: calc(var(--zen-toolbox-padding) - 5px) !important;
  
   #tabbrowser-tabs {
     min-width: 100% !important;

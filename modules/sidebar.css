@@ -512,7 +512,7 @@
   }
 }
 
-#navigator-toolbox[zen-sidebar-expanded="true"] {
+/* #navigator-toolbox[zen-sidebar-expanded="true"] {
   & #TabsToolbar-customization-target {
     & > :is(toolbaritem, toolbarbutton):not(#search-container):not(#zen-workspaces-button), & #tabbrowser-arrowscrollbox-periphery > toolbarbutton {
       width: 100% !important;
@@ -521,7 +521,7 @@
       padding-right: var(--toolbarbutton-inner-padding) !important;
     }
   }
-}
+} */
 
 .tab-background { border-radius: var(--na-user-border-radius) !important; }
 

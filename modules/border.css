@@ -43,9 +43,8 @@ body > hbox {
     /* background: var(--na-color-bg) !important; */
 }
 
-/* ====== WINDOW BORDERS */
-@media (-moz-pref("wireframe.window.border")){
-    /* window border on maximize */
+/* ====== WINDOW BORDERS ====== */
+@media (-moz-pref("wireframe.window.border", "wireframe")){
     :root[sizemode="maximized"] #browser::before {
         content: "";
         position: absolute;
@@ -54,16 +53,66 @@ body > hbox {
         pointer-events: none;
         z-index: 9999;
     }
-
-    /* window border on minimize */
+    
     :root[sizemode="normal"] #browser::before {
         content: "";
         position: absolute;
         inset: 0;
         border: 2px solid var(--na-color-border);
-        border-radius: var(--na-window-border-radius);
+        border-radius: var(--na-window-border-radius) !important;
         pointer-events: none;
         z-index: 9999;
+    }
+}
+
+@media (-moz-pref("wireframe.window.border", "macos")){
+    :root[sizemode="normal"] #browser::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      border-radius: var(--na-window-border-radius) !important;
+      z-index: 9999;
+      border: 1px solid transparent;
+      transform: translateZ(0);
+      will-change: box-shadow, opacity;
+
+      box-shadow:
+        /* --- corner mask (prevents corner bleed) --- */
+        inset 0 0 0 1px light-dark(
+          rgba(255,255,255,0.14),
+          rgba(255,255,255,0.10)
+        ),
+
+        /* --- curved metal highlight --- */
+        inset 0 0 0 2px light-dark(
+          rgba(255,255,255,0.32),
+          rgba(255,255,255,0.18)
+        ),
+
+        /* --- inner soft falloff (curved depth) --- */
+        inset 0 0 10px 4px light-dark(
+          rgba(0,0,0,0.05),
+          rgba(255,255,255,0.07)
+        ),
+
+        /* --- machined outer rim --- */
+        0 0 0 2px light-dark(
+          rgba(0,0,0,0.27),
+          rgba(255,255,255,0.30)
+        ),
+
+        /* --- outer structural ring --- */
+        0 3px 6px 1px light-dark(
+          rgba(0,0,0,0.08),
+          rgba(255,255,255,0.08)
+        ),
+
+        /* --- diffused Sonoma glow --- */
+        0 0 32px 10px color-mix(in srgb, accentcolor 55%, transparent),
+        0 0 64px 26px color-mix(in srgb, accentcolor 40%, transparent),
+        0 0 110px 60px color-mix(in srgb, accentcolor 28%, transparent);
+
     }
 }
 
@@ -81,26 +130,6 @@ body > hbox {
     outline-offset: 0px !important;
 }
 
-/* Tahoe shiny border */
-/* #zen-browser-background {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  border-radius: inherit;
-  z-index: 9999;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  box-shadow:
-    inset 0 1px 2px rgba(255, 255, 255, 0.15),
-    inset 0 -1px 2px rgba(0, 0, 0, 0.25),
-    0 0 0 1px rgba(0, 0, 0, 0.25),
-    0 4px 12px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.08),
-    rgba(255, 255, 255, 0.02)
-  );
-} */
 /* Ensure all browser elements have squared corners */
 :root #browser,
 :root body * {
@@ -486,10 +515,12 @@ body > hbox {
         #tabbrowser-tabpanels > * {
             border-top-left-radius: 0px !important;
             border-bottom-left-radius: 0px !important;
+            border-top-right-radius: 0px !important;
+            border-bottom-right-radius: 0px !important;
         }
         
         #zen-tabbox-wrapper{
-            border: 0.1px solid transparent !important;
+            border: none !important;
         }
     }
     
@@ -500,6 +531,8 @@ body > hbox {
         #tabbrowser-tabpanels > * {
             border-top-right-radius: 0px !important;
             border-bottom-right-radius: 0px !important;
+            border-top-left-radius: 0px !important;
+            border-bottom-left-radius: 0px !important;
         }
         
         #zen-tabbox-wrapper{

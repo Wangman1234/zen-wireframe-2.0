@@ -548,11 +548,21 @@
     "type": "separator"
   },
   {
-    "type": "checkbox",
+    "type": "dropdown",
     "property": "wireframe.window.border",
-    "label": "Enable border around the browser window",
-    "value": "boolean",
-    "defaultValue": true
+    "label": "Change border around the browser window",
+    "value": "string",
+    "defaultValue": "wireframe",
+    "options": [
+      {
+        "value": "wireframe",
+        "label": "wireframe"
+      },
+      {
+        "value": "macos",
+        "label": "macos"
+      }
+    ]
   },
   {
     "type": "separator"

@@ -1,5 +1,7 @@
 /* === SIDEBAR === */
 
+
+
 /* === SIDEBAR - SINGLE TOOLBAR === */
 
 #titlebar:before{
@@ -366,36 +368,38 @@
 
 /* === WORKSPACE INDICATOR REVEAL ON HOVER === */
 
-#titlebar .zen-current-workspace-indicator > hbox{
-  visibility: collapse !important;
-  opacity: 0.0 !important;
-  transform: translateX(-4px) scale(0.92);
-  transition:
-    opacity 0.22s ease,
-    transform 0.26s cubic-bezier(.25,.8,.25,1) !important;
-  pointer-events: none;
-}
-
-#titlebar .zen-current-workspace-indicator > label{
-  font-size: var(--wireframe-font-size) !important;
-  margin-left: -10px !important;
-  transition: margin-left 0.26s cubic-bezier(.25,.8,.25,1) !important;
-}
-
-.zen-current-workspace-indicator:before{
-  background: transparent !important;
-}
-
-:root:has(#titlebar .zen-current-workspace-indicator:hover){
-  #titlebar .zen-current-workspace-indicator > hbox{
-    visibility: visible !important;
-    opacity: 1 !important;
-    transform: translateX(0) scale(1);
-  }
-  
-  #titlebar .zen-current-workspace-indicator > label{
-    margin-left: 0px !important;
-  }
+@media (-moz-pref("wireframe.workspace.icon.hide")){
+    #titlebar .zen-current-workspace-indicator > hbox{
+      visibility: collapse !important;
+      opacity: 0.0 !important;
+      transform: translateX(-4px) scale(0.92);
+      transition:
+        opacity 0.22s ease,
+        transform 0.26s cubic-bezier(.25,.8,.25,1) !important;
+      pointer-events: none;
+    }
+    
+    #titlebar .zen-current-workspace-indicator > label{
+      font-size: var(--wireframe-font-size) !important;
+      margin-left: -10px !important;
+      transition: margin-left 0.26s cubic-bezier(.25,.8,.25,1) !important;
+    }
+    
+    .zen-current-workspace-indicator:before{
+      background: transparent !important;
+    }
+    
+    :root:has(#titlebar .zen-current-workspace-indicator:hover){
+      #titlebar .zen-current-workspace-indicator > hbox{
+        visibility: visible !important;
+        opacity: 1 !important;
+        transform: translateX(0) scale(1);
+      }
+      
+      #titlebar .zen-current-workspace-indicator > label{
+        margin-left: 0px !important;
+      }
+    }
 }
 
 /* === SIDEBAR FOOT BUTTON REVEAL ON HOVER === */
@@ -414,6 +418,19 @@
       height: auto !important;
       transform: translateY(0) !important;
     }
+    
+
+    :root:has(#downloadsPanel-multiView .panel-viewcontainer[panelopen="true"]) #zen-sidebar-foot-buttons {
+      visibility: visible !important;
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+}
+
+/* ===  NEW TAB === */
+
+#tabs-newtab-button{
+  border-radius: var(--na-tab-border-radius) !important;
 }
 
 /* === Changed new tab label === */

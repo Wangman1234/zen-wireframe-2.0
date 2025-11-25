@@ -4,20 +4,31 @@
 #urlbar[breakout-extend] :root:has(.urlbar-page-action[open]) #urlbar-background,
 #urlbar[breakout-extend] .urlbar-background,
 #urlbar[breakout-extend] #urlbar-container {
-  background-color: var(--zen-primary-color) !important;
   color: var(--toolbar-textcolor) !important;
 }
 
+#urlbar[open] .urlbar-background::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--zen-main-browser-background) !important;
+  outline: 2px solid var(--na-color-border) !important;
+  border-radius: var(--na-tab-border-radius) !important;
+  opacity: var(--zen-background-opacity) !important;
+  backdrop-filter: blur(20px) !important;
+  z-index: 0;
+}
+
 /* urlbar border radius */
-#urlbar-background,
+#urlbar .urlbar-background,
 #urlbar {
   border-radius: var(--na-tab-border-radius) !important;
   color: var(--toolbar-textcolor) !important;
 }
 
-#urlbar[breakout-extend] .urlbar-background {
+/* #urlbar[breakout-extend] .urlbar-background {
   outline: 2px solid var(--na-color-border) !important;
-}
+} */
 
 #urlbar .urlbarView-row {
   color: var(--toolbar-textcolor) !important;

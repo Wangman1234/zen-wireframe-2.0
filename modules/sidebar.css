@@ -402,6 +402,55 @@
     }
 }
 
+/* container adjustments */
+.zw-mode-container {
+  font-size: 13px;
+  padding: 0 4px;
+}
+
+/* edit button */
+.zw-edit-btn {
+  background: transparent;
+  border: none;
+  color: var(--toolbar-color);
+  padding: 0 6px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity .2s;
+}
+
+.zen-current-workspace-indicator:hover .zw-edit-btn {
+  opacity: 1;
+}
+
+/* menu */
+.zw-menu {
+  position: absolute;
+  top: 24px;
+  right: 0;
+  background: color-mix(in srgb, var(--toolbar-bgcolor) 70%, transparent);
+  backdrop-filter: blur(6px);
+  border-radius: 8px;
+  padding: 4px 0;
+  display: none;
+  z-index: 999999;
+}
+
+.zw-menu.show {
+  display: block;
+}
+
+.zw-menu div {
+  padding: 6px 14px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.zw-menu div:hover {
+  background: color-mix(in srgb, var(--toolbarbutton-active-bgcolor) 50%, transparent);
+}
+
+
 /* === SIDEBAR FOOT BUTTON REVEAL ON HOVER === */
 
 @media (-moz-pref("wireframe.sidebar-foot.hide")){

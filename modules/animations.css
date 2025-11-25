@@ -2,157 +2,159 @@
 
 /* === ZEN WORKSPACE SWITCHER — POLISHED FAN === */
 
-/* --- Kill Zen's overflow dots and restore real icons --- */
-#zen-workspaces-button[icons-overflow="true"] > toolbarbutton::before,
-#zen-workspaces-button[icons-overflow="true"] > toolbarbutton::after,
-#zen-workspaces-button.force-show-icons[icons-overflow="true"] > toolbarbutton::before,
-#zen-workspaces-button.force-show-icons[icons-overflow="true"] > toolbarbutton::after {
-  content: none !important;
-  display: none !important;
-}
-
-#zen-workspaces-button[icons-overflow="true"] > toolbarbutton:not([active="true"]) > img,
-#zen-workspaces-button.force-show-icons[icons-overflow="true"] > toolbarbutton:not([active="true"]) > img {
-  display: block !important;
-  width: 16px !important;
-  height: 16px !important;
-  opacity: 1 !important;
-  mask: none !important;
-  -webkit-mask: none !important;
-  background: transparent !important;
-}
-
-/* --- base hub --- */
-#zen-workspaces-button {
-  position: relative !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  width: 36px !important;
-  height: 36px !important;
-  border-radius: 50% !important;
-  background-color: color-mix(in srgb, var(--tab-selected-bgcolor) 50%, transparent) !important;
-  overflow: visible !important;
-  transition: all 0.3s ease !important;
-  z-index: 50 !important;
-}
-
-/* circular invisible buffer for smoother hover */
-#zen-workspaces-button::before {
-  content: "";
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background: transparent;
-  pointer-events: auto;
-  z-index: 0;
-}
-
-/* --- workspace icons --- */
-#zen-workspaces-button > toolbarbutton {
-  position: absolute !important;
-  width: 32px !important;
-  height: 32px !important;
-  opacity: 0 !important;
-  transform: translate(0, 0) scale(0.8) !important;
-  transition:
-    transform 0.45s cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 0.35s ease,
-    filter 0.4s ease !important;
-  z-index: 5 !important;
-  pointer-events: none !important;
-}
-
-/* active workspace always visible */
-#zen-workspaces-button > toolbarbutton[active="true"] {
-  position: relative !important;
-  opacity: 1 !important;
-  transform: scale(1) !important;
-  z-index: 6 !important;
-  pointer-events: auto !important;
-}
-
-/* hover / focus states */
-#zen-workspaces-button:hover > toolbarbutton,
-#zen-workspaces-button:focus-within > toolbarbutton {
-  opacity: 1 !important;
-  pointer-events: auto !important;
-  transform: scale(1) !important;
-}
-#zen-workspaces-button:hover > toolbarbutton[active="true"],
-#zen-workspaces-button:focus-within > toolbarbutton[active="true"] {
-  transform: translate(0, 0) scale(1) !important;
-}
-
-/* --- refined fan layout (tighter arc) --- */
-#zen-workspaces-button:hover > toolbarbutton:nth-child(1):not([active="true"]),
-#zen-workspaces-button:focus-within > toolbarbutton:nth-child(1):not([active="true"]) {
-  transform: translate(-38px, -6px) scale(1) !important;
-}
-#zen-workspaces-button:hover > toolbarbutton:nth-child(2):not([active="true"]),
-#zen-workspaces-button:focus-within > toolbarbutton:nth-child(2):not([active="true"]) {
-  transform: translate(-22px, -24px) scale(1) !important;
-}
-#zen-workspaces-button:hover > toolbarbutton:nth-child(3):not([active="true"]),
-#zen-workspaces-button:focus-within > toolbarbutton:nth-child(3):not([active="true"]) {
-  transform: translate(0px, -38px) scale(1) !important;
-}
-#zen-workspaces-button:hover > toolbarbutton:nth-child(4):not([active="true"]),
-#zen-workspaces-button:focus-within > toolbarbutton:nth-child(4):not([active="true"]) {
-  transform: translate(22px, -24px) scale(1) !important;
-}
-#zen-workspaces-button:hover > toolbarbutton:nth-child(5):not([active="true"]),
-#zen-workspaces-button:focus-within > toolbarbutton:nth-child(5):not([active="true"]) {
-  transform: translate(38px, -6px) scale(1) !important;
-}
-#zen-workspaces-button:hover > toolbarbutton:nth-child(6):not([active="true"]),
-#zen-workspaces-button:focus-within > toolbarbutton:nth-child(6):not([active="true"]) {
-  transform: translate(48px, 10px) scale(1) !important;
-}
-#zen-workspaces-button:hover > toolbarbutton:nth-child(7):not([active="true"]),
-#zen-workspaces-button:focus-within > toolbarbutton:nth-child(7):not([active="true"]) {
-  transform: translate(55px, 22px) scale(1) !important;
-}
-
-/* fade extras gracefully */
-#zen-workspaces-button:hover > toolbarbutton:nth-child(n+8):not([active="true"]),
-#zen-workspaces-button:focus-within > toolbarbutton:nth-child(n+8):not([active="true"]) {
-  opacity: 0.4 !important;
-  transform: translate(60px, 30px) scale(0.8) !important;
-}
-
-/* glow & polish */
-#zen-workspaces-button:hover > toolbarbutton,
-#zen-workspaces-button:focus-within > toolbarbutton {
-  filter: drop-shadow(0 0 5px color-mix(in srgb, var(--tab-selected-bgcolor) 55%, transparent));
-}
-
-/* icons scale + state filters */
-#zen-workspaces-button > toolbarbutton > img {
-  width: 14px !important;
-  transition: width 0.15s ease !important;
-}
-#zen-workspaces-button > toolbarbutton:hover > img {
-  width: 18px !important;
-}
-#zen-workspaces-button toolbarbutton:hover,
-#zen-workspaces-button toolbarbutton[dragged="true"] {
-  background-color: transparent !important;
-}
-#zen-workspaces-button toolbarbutton[active="true"],
-#zen-workspaces-button toolbarbutton:hover,
-#zen-workspaces-button toolbarbutton[dragged="true"] {
-  filter: grayscale(0);
-  opacity: 1;
-}
-#zen-workspaces-button toolbarbutton[active="true"] img,
-#zen-workspaces-button toolbarbutton:hover img,
-#zen-workspaces-button toolbarbutton[dragged="true"] img {
-  width: 18px !important;
+@media(-moz-pref("wireframe.workspace-switch.fan")){
+    /* --- Kill Zen's overflow dots and restore real icons --- */
+    #zen-workspaces-button[icons-overflow="true"] > toolbarbutton::before,
+    #zen-workspaces-button[icons-overflow="true"] > toolbarbutton::after,
+    #zen-workspaces-button.force-show-icons[icons-overflow="true"] > toolbarbutton::before,
+    #zen-workspaces-button.force-show-icons[icons-overflow="true"] > toolbarbutton::after {
+      content: none !important;
+      display: none !important;
+    }
+    
+    #zen-workspaces-button[icons-overflow="true"] > toolbarbutton:not([active="true"]) > img,
+    #zen-workspaces-button.force-show-icons[icons-overflow="true"] > toolbarbutton:not([active="true"]) > img {
+      display: block !important;
+      width: 16px !important;
+      height: 16px !important;
+      opacity: 1 !important;
+      mask: none !important;
+      -webkit-mask: none !important;
+      background: transparent !important;
+    }
+    
+    /* --- base hub --- */
+    #zen-workspaces-button {
+      position: relative !important;
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      width: 36px !important;
+      height: 36px !important;
+      border-radius: 50% !important;
+      background-color: color-mix(in srgb, var(--tab-selected-bgcolor) 50%, transparent) !important;
+      overflow: visible !important;
+      transition: all 0.3s ease !important;
+      z-index: 50 !important;
+    }
+    
+    /* circular invisible buffer for smoother hover */
+    #zen-workspaces-button::before {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background: transparent;
+      pointer-events: auto;
+      z-index: 0;
+    }
+    
+    /* --- workspace icons --- */
+    #zen-workspaces-button > toolbarbutton {
+      position: absolute !important;
+      width: 32px !important;
+      height: 32px !important;
+      opacity: 0 !important;
+      transform: translate(0, 0) scale(0.8) !important;
+      transition:
+        transform 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.35s ease,
+        filter 0.4s ease !important;
+      z-index: 5 !important;
+      pointer-events: none !important;
+    }
+    
+    /* active workspace always visible */
+    #zen-workspaces-button > toolbarbutton[active="true"] {
+      position: relative !important;
+      opacity: 1 !important;
+      transform: scale(1) !important;
+      z-index: 6 !important;
+      pointer-events: auto !important;
+    }
+    
+    /* hover / focus states */
+    #zen-workspaces-button:hover > toolbarbutton,
+    #zen-workspaces-button:focus-within > toolbarbutton {
+      opacity: 1 !important;
+      pointer-events: auto !important;
+      transform: scale(1) !important;
+    }
+    #zen-workspaces-button:hover > toolbarbutton[active="true"],
+    #zen-workspaces-button:focus-within > toolbarbutton[active="true"] {
+      transform: translate(0, 0) scale(1) !important;
+    }
+    
+    /* --- refined fan layout (tighter arc) --- */
+    #zen-workspaces-button:hover > toolbarbutton:nth-child(1):not([active="true"]),
+    #zen-workspaces-button:focus-within > toolbarbutton:nth-child(1):not([active="true"]) {
+      transform: translate(-38px, -6px) scale(1) !important;
+    }
+    #zen-workspaces-button:hover > toolbarbutton:nth-child(2):not([active="true"]),
+    #zen-workspaces-button:focus-within > toolbarbutton:nth-child(2):not([active="true"]) {
+      transform: translate(-22px, -24px) scale(1) !important;
+    }
+    #zen-workspaces-button:hover > toolbarbutton:nth-child(3):not([active="true"]),
+    #zen-workspaces-button:focus-within > toolbarbutton:nth-child(3):not([active="true"]) {
+      transform: translate(0px, -38px) scale(1) !important;
+    }
+    #zen-workspaces-button:hover > toolbarbutton:nth-child(4):not([active="true"]),
+    #zen-workspaces-button:focus-within > toolbarbutton:nth-child(4):not([active="true"]) {
+      transform: translate(22px, -24px) scale(1) !important;
+    }
+    #zen-workspaces-button:hover > toolbarbutton:nth-child(5):not([active="true"]),
+    #zen-workspaces-button:focus-within > toolbarbutton:nth-child(5):not([active="true"]) {
+      transform: translate(38px, -6px) scale(1) !important;
+    }
+    #zen-workspaces-button:hover > toolbarbutton:nth-child(6):not([active="true"]),
+    #zen-workspaces-button:focus-within > toolbarbutton:nth-child(6):not([active="true"]) {
+      transform: translate(48px, 10px) scale(1) !important;
+    }
+    #zen-workspaces-button:hover > toolbarbutton:nth-child(7):not([active="true"]),
+    #zen-workspaces-button:focus-within > toolbarbutton:nth-child(7):not([active="true"]) {
+      transform: translate(55px, 22px) scale(1) !important;
+    }
+    
+    /* fade extras gracefully */
+    #zen-workspaces-button:hover > toolbarbutton:nth-child(n+8):not([active="true"]),
+    #zen-workspaces-button:focus-within > toolbarbutton:nth-child(n+8):not([active="true"]) {
+      opacity: 0.4 !important;
+      transform: translate(60px, 30px) scale(0.8) !important;
+    }
+    
+    /* glow & polish */
+    #zen-workspaces-button:hover > toolbarbutton,
+    #zen-workspaces-button:focus-within > toolbarbutton {
+      filter: drop-shadow(0 0 5px color-mix(in srgb, var(--tab-selected-bgcolor) 55%, transparent));
+    }
+    
+    /* icons scale + state filters */
+    #zen-workspaces-button > toolbarbutton > img {
+      width: 14px !important;
+      transition: width 0.15s ease !important;
+    }
+    #zen-workspaces-button > toolbarbutton:hover > img {
+      width: 18px !important;
+    }
+    #zen-workspaces-button toolbarbutton:hover,
+    #zen-workspaces-button toolbarbutton[dragged="true"] {
+      background-color: transparent !important;
+    }
+    #zen-workspaces-button toolbarbutton[active="true"],
+    #zen-workspaces-button toolbarbutton:hover,
+    #zen-workspaces-button toolbarbutton[dragged="true"] {
+      filter: grayscale(0);
+      opacity: 1;
+    }
+    #zen-workspaces-button toolbarbutton[active="true"] img,
+    #zen-workspaces-button toolbarbutton:hover img,
+    #zen-workspaces-button toolbarbutton[dragged="true"] img {
+      width: 18px !important;
+    }
 }
 
 

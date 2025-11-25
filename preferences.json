@@ -98,6 +98,16 @@
   },
   {
     "type": "checkbox",
+    "property": "wireframe.workspace-switch.fan",
+    "label": "Enable fan style workspace switcher (experimental)",
+    "value": "boolean",
+    "default": false
+  },
+  {
+    "type": "separator"
+  },
+  {
+    "type": "checkbox",
     "property": "wireframe.sidebar-foot.hide",
     "label": "Hide sidebar foot buttons",
     "value": "boolean",

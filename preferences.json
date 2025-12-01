@@ -98,6 +98,16 @@
   },
   {
     "type": "checkbox",
+    "property": "wireframe.workspace.icon.hide",
+    "label": "Hide workspace indicator icon",
+    "value": "boolean",
+    "default": true
+  },
+  {
+    "type": "separator"
+  },
+  {
+    "type": "checkbox",
     "property": "wireframe.workspace-switch.fan",
     "label": "Enable fan style workspace switcher (experimental)",
     "value": "boolean",

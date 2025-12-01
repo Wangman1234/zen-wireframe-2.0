@@ -453,28 +453,25 @@
 
 /* === SIDEBAR FOOT BUTTON REVEAL ON HOVER === */
 
-@media (-moz-pref("wireframe.sidebar-foot.hide")){
-    #zen-sidebar-foot-buttons{
-      visibility: collapse !important;
-      transform: translateY(10px) !important;
+@media (-moz-pref("wireframe.sidebar-foot.hide")) {
+
+    #zen-sidebar-foot-buttons {
       opacity: 0 !important;
-      transition: visibility 0.15s ease, opacity 0.15s ease, transform 0.15s ease !important;
+      transform: translateY(10px) !important;
+      transition: opacity 0.15s ease, transform 0.15s ease !important;
     }
-    
-    #navigator-toolbox:hover #zen-sidebar-foot-buttons{
-      visibility: visible !important;
+
+    #navigator-toolbox:hover #zen-sidebar-foot-buttons {
       opacity: 1 !important;
-      height: auto !important;
       transform: translateY(0) !important;
     }
-    
 
     :root:has(#downloadsPanel-multiView .panel-viewcontainer[panelopen="true"]) #zen-sidebar-foot-buttons {
-      visibility: visible !important;
       opacity: 1 !important;
       transform: translateY(0) !important;
     }
 }
+
 
 /* ===  NEW TAB === */
 

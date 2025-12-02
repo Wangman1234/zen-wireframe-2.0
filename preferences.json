@@ -214,6 +214,16 @@
     "type": "separator"
   },
   {
+    "type": "checkbox",
+    "property": "wireframe.urlbar.blurred",
+    "label": "Enable frosted glass effect on URL bar",
+    "value": "boolean",
+    "defaultValue": false
+  },
+  {
+    "type": "separator"
+  },
+  {
     "property": "wireframe.urlbar.position.top",
     "label": "Position URL bar at the top (for multiple and collapsed toolbar only)",
     "default": false,
@@ -591,6 +601,26 @@
     "type": "dropdown",
     "property": "wireframe.webview.border",
     "label": "Change border around the webview",
+    "value": "string",
+    "defaultValue": "wireframe",
+    "options": [
+      {
+        "value": "wireframe",
+        "label": "wireframe"
+      },
+      {
+        "value": "macos",
+        "label": "macos"
+      }
+    ]
+  },
+  {
+    "type": "separator"
+  },
+  {
+    "type": "dropdown",
+    "property": "wireframe.urlbar.border",
+    "label": "Change border around the URL bar",
     "value": "string",
     "defaultValue": "wireframe",
     "options": [

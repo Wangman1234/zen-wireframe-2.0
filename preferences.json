@@ -216,7 +216,7 @@
   {
     "type": "checkbox",
     "property": "wireframe.urlbar.blurred",
-    "label": "Enable frosted glass effect on URL bar",
+    "label": "Enable tinted glass effect on URL bar",
     "value": "boolean",
     "defaultValue": false
   },

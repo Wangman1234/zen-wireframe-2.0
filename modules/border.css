@@ -73,7 +73,6 @@ body > hbox {
       pointer-events: none;
       border-radius: var(--na-window-border-radius) !important;
       z-index: 9999;
-      border: 1px solid transparent;
       transform: translateZ(0);
       will-change: box-shadow, opacity;
 
@@ -176,7 +175,7 @@ body > hbox {
 }
 
 /* ====== WEBVIEW BORDER ====== */
-@media (-moz-pref("wireframe.webview.border")){
+@media (-moz-pref("wireframe.webview.border", "wireframe")){
     /* content window border size on RIGHT side tabbar */
     :root[zen-right-side="true"]:not([zen-compact-mode="true"]):not(
             [inDOMFullscreen="true"]
@@ -193,6 +192,41 @@ body > hbox {
         border: 2px solid var(--na-color-border) !important;
     }
 }
+
+@media (-moz-pref("wireframe.webview.border", "macos")) {
+
+  :root:not([zen-compact-mode="true"]):not([inDOMFullscreen="true"])
+
+  #zen-tabbox-wrapper::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      border-radius: var(--na-user-border-radius);
+      z-index: 9999;
+
+      box-shadow:
+        /* --- micro corner mask (softened) --- */
+        inset 0 0 0 1px rgba(255,255,255,0.10),
+
+        /* --- milky curved highlight (the secret sauce) --- */
+        inset 0 0 0 2px rgba(255,255,255,0.22),
+
+        /* --- concave falloff (boosted softness) --- */
+        inset 0 0 12px 6px rgba(0,0,0,0.06),
+
+        /* --- softened outer rim (less harsh) --- */
+        0 0 0 1px rgba(0,0,0,0.18),
+
+        /* --- light spread glow (barely visible, creates “milkiness”) --- */
+        0 0 12px 5px rgba(255,255,255,0.10),
+
+        /* --- depth ring (slightly larger, softer) --- */
+        0 2px 5px rgba(0,0,0,0.08);
+  }
+}
+
+
 
 /* fix for overflowing borders when webview border is off */
 @media not (-moz-pref("wireframe.webview.border")){

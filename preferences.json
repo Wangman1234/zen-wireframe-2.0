@@ -588,11 +588,21 @@
     "type": "separator"
   },
   {
-    "type": "checkbox",
+    "type": "dropdown",
     "property": "wireframe.webview.border",
-    "label": "Enable border around the webview",
-    "value": "boolean",
-    "defaultValue": true
+    "label": "Change border around the webview",
+    "value": "string",
+    "defaultValue": "wireframe",
+    "options": [
+      {
+        "value": "wireframe",
+        "label": "wireframe"
+      },
+      {
+        "value": "macos",
+        "label": "macos"
+      }
+    ]
   },
   {
     "type": "separator"

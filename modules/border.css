@@ -556,6 +556,10 @@ body > hbox {
         #zen-tabbox-wrapper{
             border: none !important;
         }
+        
+        #zen-tabbox-wrapper::before {
+            box-shadow: none !important;
+        }
     }
     
     :root[zen-single-toolbar="true"][zen-right-side="true"]:not([zen-compact-mode="true"]){
@@ -570,7 +574,11 @@ body > hbox {
         }
         
         #zen-tabbox-wrapper{
-            border: 0.1px solid transparent !important;
+            border: none !important;
+        }
+        
+        #zen-tabbox-wrapper::before {
+            box-shadow: none !important;
         }
     }
 }

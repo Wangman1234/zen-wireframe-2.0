@@ -364,40 +364,64 @@
     "type": "dropdown",
     "property": "wireframe.blank.logo",
     "label": "Change blank page logo",
-    "value": "number",
-    "default": 1,
+    "value": "string",
+    "defaultValue": "wireframe",
     "options": [
       {
         "value": 0,
         "label": "No Logo"
       },
       {
-        "value": 1,
+        "value": "wireframe",
         "label": "Wireframe"
       },
       {
-        "value": 2,
+        "value": "checks",
         "label": "Checks"
       },
       {
-        "value": 3,
+        "value": "starlight",
         "label": "Starlight"
       },
       {
-        "value": 4,
+        "value": "rings",
         "label": "Rings"
       },
       {
-        "value": 5,
+        "value": "waves",
         "label": "Waves"
       },
       {
-        "value": 6,
+        "value": "globe",
         "label": "Globe"
       },
       {
-        "value": 7,
+        "value": "globe-alt",
+        "label": "Globe Alt"
+      },
+      {
+        "value": "y2k-globe",
+        "label": "Y2K Globe"
+      },
+      {
+        "value": "smiley",
         "label": "Smiley"
+      },
+      {
+        "value": "sad-face",
+        "label": "Sad Smiley"
+      }
+      {
+        "value": "asterisk",
+        "label": "Asterisk"
+      },
+      {
+        "value": "barcode",
+        "label": "Barcode"
+      },
+      {
+        "value": "arrow",
+        "label": "Arrow"
       }
     ]
   },
@@ -411,6 +435,17 @@
     "processAs": "root",
     "label": "Change blank page logo size",
     "placeholder": "150px"
+  },
+  {
+    "type": "separator"
+  },
+  {
+    "type": "string",
+    "property": "wf-blank-logo-opacity",
+    "defaultValue": "0.75",
+    "processAs": "root",
+    "label": "Change blank page logo opacity",
+    "placeholder": "0.75"
   },
   {
     "type": "separator"
@@ -718,7 +753,7 @@
     "property": "wireframe.tab.border_radius",
     "label": "Border radius for tabs",
     "value": "number",
-    "default": 0,
+    "default": 16,
     "options": [
       {
         "value": 0,
@@ -758,7 +793,7 @@
     "property": "wireframe.essentials.border_radius",
     "label": "Border radius for essentials",
     "value": "number",
-    "default": 0,
+    "default": 16,
     "options": [
       {
         "value": 0,

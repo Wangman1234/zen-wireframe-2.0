@@ -18,14 +18,16 @@
   overflow: hidden !important;
 }
 
+/* ====== FLOATING TRANSPARENT URLBAR ====== */
 @media(-moz-pref("wireframe.urlbar.blurred")){
   #urlbar[open] .urlbar-background {
     background: var(--zen-main-browser-background) !important;
     opacity: var(--zen-background-opacity) !important;
-  }
+}
+
 
   #urlbar[open] {
-    backdrop-filter: blur(24px) brightness(1.15) !important;
+    backdrop-filter: blur(24px) brightness(0.55) !important;
   }
 }
 

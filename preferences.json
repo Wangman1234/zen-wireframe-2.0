@@ -148,7 +148,7 @@
   },
   {
     "type": "checkbox",
-    "property": "wireframe.compact.siderbar.transparent",
+    "property": "wireframe.compact.sidebar.transparent",
     "label": "Make sidebar transparent in compact mode",
     "value": "boolean",
     "default": false

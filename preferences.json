@@ -547,6 +547,26 @@
   },
   {
     "type": "dropdown",
+    "property": "wireframe.folders",
+    "label": "Folder styling options",
+    "value": "string",
+    "defaultValue": "border",
+    "options": [
+      {
+        "value": "border",
+        "label": "Border"
+      },
+      {
+        "value": "background",
+        "label": "Background"
+      }
+    ]
+  },
+  {
+    "type": "separator"
+  },
+  {
+    "type": "dropdown",
     "property": "wireframe.tab-loading.animation",
     "label": "Tab loading animation options",
     "value": "string",

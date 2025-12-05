@@ -732,10 +732,30 @@ zen-folder {
 }
 
 /* === FOLDER STYLING === */
-zen-folder:not([collapsed]){
+@media (-moz-pref("wireframe.folders","border")){
+  zen-folder {
+    border-radius: var(--na-tab-border-radius) !important;
+    position: relative !important; /* needed for the outline pseudo */
+  }
+
+  zen-folder:not([collapsed]){
+    border-radius: var(--na-tab-border-radius) !important;
+    transition: all 0.18s ease !important;
+    outline: 2px solid var(--zen-toolbar-element-bg) !important;
+  }
+}
+
+@media (-moz-pref("wireframe.folders","background")){
+  zen-folder {
+    border-radius: var(--na-tab-border-radius) !important;
+    position: relative !important; /* needed for the outline pseudo */
+  }
+
+  zen-folder:not([collapsed]){
     background: var(--zen-toolbar-element-bg) !important;
     border-radius: var(--na-tab-border-radius) !important;
-  transition: all 0.18s ease !important;
+    transition: all 0.18s ease !important;
+  }
 }
 
 /* ======= MEDIA QUERIES FOR PREFERENCES ======== */

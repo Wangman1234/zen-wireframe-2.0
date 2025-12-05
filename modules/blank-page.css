@@ -108,7 +108,7 @@
 
 @media (-moz-pref("wireframe.blank.logo","waves")) {
     :root {
-        --wf-blank-logo: url("https://raw.githubusercontent.com/SehajveerSingh2005/zen-wireframe-2.0/463d91c69f361853f3a6b71a67b1980f79319922/elements/waves.svg");
+        --wf-blank-logo: url("https://raw.githubusercontent.com/SehajveerSingh2005/zen-wireframe-2.0/3fc526f18c92ae9aacb2372a4655f478aceb333e/elements/waves.svg");
     }
 }
 
@@ -124,15 +124,27 @@
     }
 }
 
+@media (-moz-pref("wireframe.blank.logo","y2k-star")) {
+    :root {
+        --wf-blank-logo: url("https://raw.githubusercontent.com/SehajveerSingh2005/zen-wireframe-2.0/3fc526f18c92ae9aacb2372a4655f478aceb333e/elements/y2k-stars.svg");
+    }
+}
+
+@media (-moz-pref("wireframe.blank.logo","y2k-smiley")) {
+    :root {
+        --wf-blank-logo: url("https://raw.githubusercontent.com/SehajveerSingh2005/zen-wireframe-2.0/3fc526f18c92ae9aacb2372a4655f478aceb333e/elements/y2k-smiley.svg");
+    }
+}
+
 @media (-moz-pref("wireframe.blank.logo","asterisk")) {
     :root {
-        --wf-blank-logo: url("https://raw.githubusercontent.com/SehajveerSingh2005/zen-wireframe-2.0/463d91c69f361853f3a6b71a67b1980f79319922/elements/asterisk.svg");
+        --wf-blank-logo: url("https://raw.githubusercontent.com/SehajveerSingh2005/zen-wireframe-2.0/3fc526f18c92ae9aacb2372a4655f478aceb333e/elements/asterisk.svg");
     }
 }
 
 @media (-moz-pref("wireframe.blank.logo","arrow")) {
     :root {
-        --wf-blank-logo: url("https://raw.githubusercontent.com/SehajveerSingh2005/zen-wireframe-2.0/463d91c69f361853f3a6b71a67b1980f79319922/elements/arrow.svg");
+        --wf-blank-logo: url("https://raw.githubusercontent.com/SehajveerSingh2005/zen-wireframe-2.0/dea3ee388719e68fec4ac403b852728b64015101/elements/arrow.svg");
     }
 }
 

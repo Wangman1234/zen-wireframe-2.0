@@ -396,16 +396,20 @@
         "label": "Globe"
       },
       {
-        "value": "globe-alt",
-        "label": "Globe Alt"
-      },
-      {
         "value": "y2k-globe",
         "label": "Y2K Globe"
       },
       {
+        "value": "y2k-star",
+        "label": "Y2K Star"
+      },
+      {
         "value": "smiley",
         "label": "Smiley"
+      },
+      {
+        "value": "y2k-smiley",
+        "label": "Y2K Smiley"
       },
       {
         "value": "sad-face",

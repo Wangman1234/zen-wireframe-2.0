@@ -16,7 +16,7 @@
     }
 }
 
-/* --- Empty-tab logo: colorable without touching the bg or PiP --- */
+/* === Empty-tab logo: colorable without touching the bg or PiP === */
 
 .browserStack::before {
     content: "" !important;
@@ -27,7 +27,8 @@
     width: var(--wf-blank-logo-size, 150px) !important;
     height: var(--wf-blank-logo-size, 150px) !important;
     opacity: 0 !important; /* hidden by default */
-    transition: opacity 0.35s ease !important; /* smooth fade */
+    transition: opacity 0.18s ease !important; /* smooth fade */
+    transition-delay: 0.33s ease !important; /* added delay */
     pointer-events: none !important;
     z-index: 1 !important;
     background-repeat: no-repeat !important;
@@ -46,7 +47,7 @@
     background-size: 150px !important;
 }
 
-/* the logo sits in ::before so we can target it alone with a filter */
+/* blank logo on pseudo element */
 #browser:has([zen-empty-tab="true"][selected="true"]) .browserStack::before {
     content: "" !important;
     position: absolute !important;
@@ -71,9 +72,9 @@
     filter: var(--zen-logo-filter, none) !important;
 }
 
-#browser:has([zen-empty-tab="true"][selected="true"]) 
-.browserStack::before:-moz-window-inactive {
-    opacity: 0.4 !important;
+/* blank logo reduced opacity on inactive window */
+#browser:has([zen-empty-tab="true"][selected="true"]) .browserStack:-moz-window-inactive::before {
+  opacity: 0.45 !important;
 }
 
 
@@ -95,6 +96,7 @@
 }
 
 /* === Logo Options (switchable via wireframe.blank.logo) === */
+
 @media (-moz-pref("wireframe.blank.logo",0)) {
     :root {
         --wf-blank-logo: none;

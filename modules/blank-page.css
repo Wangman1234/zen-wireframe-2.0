@@ -18,6 +18,23 @@
 
 /* --- Empty-tab logo: colorable without touching the bg or PiP --- */
 
+.browserStack::before {
+    content: "" !important;
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: var(--wf-blank-logo-size, 150px) !important;
+    height: var(--wf-blank-logo-size, 150px) !important;
+    opacity: 0 !important; /* hidden by default */
+    transition: opacity 0.35s ease !important; /* smooth fade */
+    pointer-events: none !important;
+    z-index: 1 !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: contain !important;
+}
+
 /* ensure the tab content container is a positioned container for the pseudo */
 #browser:has([zen-empty-tab="true"][selected="true"]) .browserStack {
     position: relative !important;
@@ -53,6 +70,12 @@
         opacity 0.25s ease !important;
     filter: var(--zen-logo-filter, none) !important;
 }
+
+#browser:has([zen-empty-tab="true"][selected="true"]) 
+.browserStack::before:-moz-window-inactive {
+    opacity: 0.4 !important;
+}
+
 
 /* THEME FILTERS — only affect the logo pseudo, NOT the bg or PiP */
 @media (-moz-pref("wireframe.blank.theme", 0)) {

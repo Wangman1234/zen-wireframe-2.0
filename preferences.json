@@ -183,6 +183,16 @@
     "value": "boolean",
     "default": false
   },
+  {
+    "type": "separator"
+  },
+  {
+    "type": "checkbox",
+    "property": "wireframe.trackpad.animation",
+    "label": "Enable trackpad animations",
+    "value": "boolean",
+    "default": true
+  },
 
   {
     "type": "text",

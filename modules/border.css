@@ -591,3 +591,34 @@ body > hbox {
         background-color: transparent !important;
     }
 }
+
+/* ====== PREVIOUS/NEXT ANIMATION ====== */
+
+/* Always animate back and forth */
+browser {
+  @media (-moz-pref("wireframe.trackpad.animation")) {
+    transition: transform 0.33s ease, scale 0.33s ease, border-radius 0.33s ease !important;
+  }
+}
+
+/* Previous animation */
+.browserStack:has(
+    #historySwipeAnimationPreviousArrow:not([style="translate: none;"])
+) browser {
+  @media (-moz-pref("wireframe.trackpad.animation")) {
+    scale: 0.95 !important;
+    transform: translateX(3%) !important;
+    border-radius: var(--na-user-border-radius) !important;
+  }
+}
+
+/* Next animation */
+.browserStack:has(
+    #historySwipeAnimationNextArrow:not([style="translate: none;"])
+) browser {
+  @media (-moz-pref("wireframe.trackpad.animation")) {
+    scale: 0.95 !important;
+    transform: translateX(-3%) !important;
+    border-radius: var(--na-user-border-radius) !important;
+  }
+}

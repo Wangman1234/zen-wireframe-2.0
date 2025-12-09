@@ -470,6 +470,17 @@
       opacity: 1 !important;
       transform: translateY(0) !important;
     }
+  
+    /* media player shift */
+    
+  #zen-media-controls-toolbar{
+    transform: translateY(48px) !important;
+    transition: transform 0.15s ease !important;
+  }
+  
+  #navigator-toolbox:hover #zen-media-controls-toolbar{
+    transform: translateY(0) !important;
+  }
 }
 
 
@@ -533,8 +544,33 @@
 /* sidebar border */
 
 :root[zen-compact-mode="true"] #titlebar {
+  outline: none !important;
   border: 1px solid var(--na-color-border) !important;
-  border-color: var(--na-color-border) !important;
+  border-color: var(--toolbox-textcolor) !important;
+}
+
+/* macos border for compact sidebar */
+
+@media (-moz-pref("wireframe.window.border","macos")){
+  :root[zen-compact-mode="true"] #titlebar{
+    border: none !important;
+  }
+  
+  :root[zen-compact-mode="true"] #titlebar::before{
+    box-shadow: 
+      /* --- corner mask: prevents edge halo bleeding --- */ 
+      inset 0 0 0 1px rgba(255,255,255,0.22), 
+      /* --- curved metal highlight (top + edges) --- */ 
+      inset 0 0 0 2px rgba(255,255,255,0.32), 
+      /* --- inner soft falloff depth --- */ 
+      inset 0 0 8px 3px rgba(0,0,0,0.08), 
+      /* --- machined outer rim --- */ 
+      0 0 0 1.5px rgba(0,0,0,0.25), 
+      /* --- outer structure ring / subtle glow --- */ 
+      0 1.5px 3px rgba(0,0,0,0.20), 
+      /* --- soft Sonoma glow (barely visible, premium) --- */ 
+      0 0 22px 3px color-mix(in srgb, var(--zen-primary-color) 40%, transparent); 
+  } 
 }
 
 #zen-browser-tabs-wrapper stack {
@@ -722,7 +758,12 @@ zen-folder {
     content: "";
     inset: 0;
     position: absolute;
+    pointer-events: none;
     backdrop-filter: blur(24px) brightness(1.15) !important;
+  }
+  
+  :root[zen-compact-mode="true"] #zen-sidebar-top-buttons{
+    z-index: 1 !important;
   }
 
   :root[zen-compact-mode="true"] .zen-toolbar-background {

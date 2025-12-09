@@ -175,6 +175,7 @@ body > hbox {
 }
 
 /* ====== WEBVIEW BORDER ====== */
+
 @media (-moz-pref("wireframe.webview.border", "wireframe")){
     /* content window border size on RIGHT side tabbar */
     :root[zen-right-side="true"]:not([zen-compact-mode="true"]):not(

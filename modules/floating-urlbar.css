@@ -49,9 +49,7 @@
     /* --- machined outer rim --- */ 
     0 0 0 1.5px rgba(0,0,0,0.25), 
     /* --- outer structure ring / subtle glow --- */ 
-    0 3px 6px rgba(0,0,0,0.20), 
-    /* --- soft Sonoma glow (barely visible, premium) --- */ 
-    0 0 22px 3px color-mix(in srgb, var(--zen-primary-color) 40%, transparent); 
+    0 3px 6px rgba(0,0,0,0.20)
   }
 }
 

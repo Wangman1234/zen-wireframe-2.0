@@ -707,6 +707,16 @@
     "type": "separator"
   },
   {
+    "type": "checkbox",
+    "property": "wireframe.macos.border",
+    "label": "Enable macOS style border for compact sidebar and other elements",
+    "value": "boolean",
+    "default": false
+  },
+  {
+    "type": "separator"
+  },
+  {
     "type": "dropdown",
     "property": "wireframe.webview.border_radius",
     "label": "Border radius for webview",

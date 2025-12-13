@@ -471,15 +471,27 @@
       transform: translateY(0) !important;
     }
   
-    /* media player shift */
-    
-  #zen-media-controls-toolbar{
-    transform: translateY(48px) !important;
-    transition: transform 0.15s ease !important;
+  /* media player shift */
+  @media(-moz-pref("wireframe.workspace-switch.fan")){
+    #zen-media-controls-toolbar{
+      transform: translateY(48px) !important;
+      transition: transform 0.15s ease !important;
+    }
+
+    #navigator-toolbox:hover #zen-media-controls-toolbar{
+      transform: translateY(0) !important;
+    }
   }
   
-  #navigator-toolbox:hover #zen-media-controls-toolbar{
-    transform: translateY(0) !important;
+  @media not (-moz-pref("wireframe.workspace-switch.fan")){
+    #zen-media-controls-toolbar{
+      transform: translateY(42px) !important;
+      transition: transform 0.15s ease !important;
+    }
+
+    #navigator-toolbox:hover #zen-media-controls-toolbar{
+      transform: translateY(0) !important;
+    }
   }
 }
 
@@ -551,7 +563,7 @@
 
 /* macos border for compact sidebar */
 
-@media (-moz-pref("wireframe.window.border","macos")){
+@media (-moz-pref("wireframe.macos.border")){
   :root[zen-compact-mode="true"] #titlebar{
     border: none !important;
   }
@@ -783,6 +795,7 @@ zen-folder {
     border-radius: var(--na-tab-border-radius) !important;
     transition: all 0.18s ease !important;
     outline: 2px solid var(--zen-toolbar-element-bg) !important;
+    outline-offset: -4px !important;
   }
 }
 

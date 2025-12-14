@@ -158,6 +158,16 @@
   },
   {
     "type": "checkbox",
+    "property": "wireframe.contextmenu",
+    "label": "Enable glass tint context menu",
+    "value": "boolean",
+    "default": false
+  },
+  {
+    "type": "separator"
+  },
+  {
+    "type": "checkbox",
     "property": "wireframe.nogaps.enabled",
     "label": "Enable no gap for single-toolbar",
     "value": "boolean",

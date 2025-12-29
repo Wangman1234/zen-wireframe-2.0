@@ -547,23 +547,23 @@
     "type": "separator"
   },
   {
-    "type": "number",
+    "type": "string",
     "property": "pattern-opacity",
     "processAs": "root",
     "label": "Change browser background pattern opacity",
-    "defaultValue": 0.4,
-    "placeholder": 0.4
+    "defaultValue": "0.4",
+    "placeholder": "0.4"
   },
   {
     "type": "separator"
   },
   {
-    "type": "number",
+    "type": "string",
     "property": "pattern-brightness",
     "processAs": "root",
     "label": "Change browser background pattern brightness",
-    "defaultValue": 0.7,
-    "placeholder": 0.7
+    "defaultValue": "0.7",
+    "placeholder": "0.7"
   },
 
   {

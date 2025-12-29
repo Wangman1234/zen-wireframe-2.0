@@ -373,7 +373,7 @@
 
   {
     "type": "text",
-    "label": "Blank Page Settings",
+    "label": "Cool Visual Element Settings",
     "margin": "30px 0 20px 0",
     "size": "25px"
   },
@@ -494,6 +494,76 @@
         "label": "Transparent"
       }
     ]
+  },
+  {
+    "type": "separator"
+  },
+  {
+    "type": "dropdown",
+    "property": "wireframe.browser.pattern",
+    "label": "Change browser background pattern",
+    "value": "string",
+    "defaultValue": "none",
+    "options": [
+      {
+        "value": "none",
+        "label": "None"
+      },
+      {
+        "value": "fancy-rect",
+        "label": "Fancy Rectangles"
+      },
+      {
+        "value": "leaf",
+        "label": "Leafs"
+      },
+      {
+        "value": "stripes",
+        "label": "Stripes"
+      },
+      {
+        "value": "stars",
+        "label": "Stars"
+      },
+      {
+        "value": "waves",
+        "label": "Waves"
+      },
+      {
+        "value": "cutout",
+        "label": "Cutout"
+      },
+      {
+        "value": "polka-dots",
+        "label": "Polka Dots"
+      },
+      {
+        "value": "zig-zag",
+        "label": "Zig Zag"
+      }
+    ]
+  },
+  {
+    "type": "separator"
+  },
+  {
+    "type": "string",
+    "property": "pattern-opacity",
+    "processAs": "root",
+    "label": "Change browser background pattern opacity",
+    "defaultValue": "0.4",
+    "placeholder": "0.4"
+  },
+  {
+    "type": "separator"
+  },
+  {
+    "type": "string",
+    "property": "pattern-brightness",
+    "processAs": "root",
+    "label": "Change browser background pattern brightness",
+    "defaultValue": "0.7",
+    "placeholder": "0.7"
   },
 
   {

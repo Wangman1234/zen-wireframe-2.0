@@ -230,6 +230,46 @@
       }
     ]
   },
+    {
+    "type": "separator"
+  },
+  {
+    "type": "dropdown",
+    "property": "wireframe.urlbar.border_radius",
+    "label": "Border radius for urlbar",
+    "value": "number",
+    "default": 16,
+    "options": [
+      {
+        "value": 0,
+        "label": "0px"
+      },
+      {
+        "value": 4,
+        "label": "4px"
+      },
+      {
+        "value": 8,
+        "label": "8px"
+      },
+      {
+        "value": 12,
+        "label": "12px"
+      },
+      {
+        "value": 16,
+        "label": "16px"
+      },
+      {
+        "value": 20,
+        "label": "20px"
+      },
+      {
+        "value": 24,
+        "label": "24px"
+      }
+    ]
+  },
   {
     "type": "separator"
   },

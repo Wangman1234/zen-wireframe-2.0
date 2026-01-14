@@ -201,4 +201,9 @@
     :root {
         --wf-blank-logo: url("https://raw.githubusercontent.com/SehajveerSingh2005/zen-wireframe-2.0/985805e2d24aad964449f1d6a6da8614799b530e/elements/MARTY-SUPREME.svg");
     }
+
+    /* Disabling filter for Marty Supreme */
+    :root {
+        --zen-logo-filter: none;
+    }
 }

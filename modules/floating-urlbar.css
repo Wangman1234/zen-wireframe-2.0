@@ -1,4 +1,7 @@
 /* FLOATING URLBAR */
+/* #urlbar[open] .urlbar-input{
+  font-size: 1em !important;
+} */
 
 /* URLBAR COLORS */
 #urlbar[breakout-extend] :root:has(.urlbar-page-action[open]) #urlbar-background,
@@ -402,7 +405,7 @@
 
     /* expanded urlbar items padding */
     #urlbar-container:has(#urlbar[breakout-extend]) #urlbar {
-      font-size: 1em !important;
+/*       font-size: 1em !important; */
       height: fit-content !important;
       padding-inline: 2px !important;
       padding-block: 2px !important;
@@ -433,9 +436,9 @@
       margin-inline: 0px !important;
     }
 
-    #urlbar-container:has(#urlbar[breakout-extend]) #urlbar-results {
+/*     #urlbar-container:has(#urlbar[breakout-extend]) #urlbar-results {
       font-size: 1em !important;
-    }
+    } */
 
     /* Hide/style website icons based on preferences */
     @media (-moz-bool-pref: "wireframe.urlbar.icons.hide") {
@@ -577,7 +580,7 @@
 
     /* expanded urlbar */
     #urlbar {
-      top: auto !important;
+      top: 30% !important;
     }
 
     /* urlbar uses webview border radius */
@@ -659,7 +662,7 @@
 /*       animation: slideFromBottom 0.18s cubic-bezier(0.4, 0, 0.2, 1) forwards !important; */
       /*   transform: translateX(-50%) !important; */ /*removed becasue the animation handles it*/
       right: auto !important;
-      top: 50% !important;
+      top: 30% !important;
     }
 
 /*     @media not (-moz-pref("zen.view.use-single-toolbar")) {
@@ -678,7 +681,7 @@
             right: auto !important;
             display: flex !important;
             flex-direction: column !important;
-            top: 50% !important;
+            top: 30% !important;
         }
     }
 
@@ -691,7 +694,7 @@
             right: auto !important;
             display: flex !important;
             flex-direction: column !important;
-            top: 50% !important;
+            top: 30% !important;
         }
     }
 
@@ -706,7 +709,7 @@
         right: auto !important;
         display: flex !important;
         flex-direction: column !important;
-        top: 50% !important;
+        top: 30% !important;
     }
 
     /* move urlbar input to bottom*/
@@ -722,7 +725,7 @@
 
     /* expanded urlbar items padding */
     #urlbar-container:has(#urlbar[breakout-extend]) #urlbar {
-      font-size: 1em !important;
+/*       font-size: 1em !important; */
       height: fit-content !important;
       padding-inline: 2px !important;
       padding-block: 2px !important;
@@ -753,9 +756,9 @@
       margin-inline: 0px !important;
     }
 
-    #urlbar-container:has(#urlbar[breakout-extend]) #urlbar-results {
+/*     #urlbar-container:has(#urlbar[breakout-extend]) #urlbar-results {
       font-size: 1em !important;
-    }
+    } */
 
     /* Hide/style website icons based on preferences */
     @media (-moz-bool-pref: "wireframe.urlbar.icons.hide") {
@@ -1013,7 +1016,7 @@
 
     /* expanded urlbar items padding */
     #urlbar-container:has(#urlbar[breakout-extend]) #urlbar {
-      font-size: 1em !important;
+/*       font-size: 1em !important; */
       height: fit-content !important;
       padding-inline: 2px !important;
       padding-block: 2px !important;
@@ -1044,9 +1047,9 @@
       margin-inline: 0px !important;
     }
 
-    #urlbar-container:has(#urlbar[breakout-extend]) #urlbar-results {
+/*     #urlbar-container:has(#urlbar[breakout-extend]) #urlbar-results {
       font-size: 1em !important;
-    }
+    } */
 
     /* Hide/style website icons based on preferences */
     @media (-moz-bool-pref: "wireframe.urlbar.icons.hide") {
@@ -1271,7 +1274,7 @@
 /*       animation: slideFromBottom 0.18s cubic-bezier(0.4, 0, 0.2, 1) forwards !important; */
       /*   transform: translateX(-50%) !important; */ /*removed becasue the animation handles it*/
       right: auto !important;
-      top: 50% !important;
+      top: 35% !important;
     }
 
 /*     @media not (-moz-pref("zen.view.use-single-toolbar")) {
@@ -1290,7 +1293,7 @@
             right: auto !important;
             display: flex !important;
             flex-direction: column !important;
-            top: 50% !important;
+            top: 35% !important;
         }
     }
 
@@ -1303,7 +1306,7 @@
             right: auto !important;
             display: flex !important;
             flex-direction: column !important;
-            top: 50% !important;
+            top: 35% !important;
         }
     }
 
@@ -1318,7 +1321,7 @@
         right: auto !important;
         display: flex !important;
         flex-direction: column !important;
-        top: 50% !important;
+        top: 35% !important;
     }
 
     /* move urlbar input to bottom*/
@@ -1334,7 +1337,7 @@
 
     /* expanded urlbar items padding */
     #urlbar-container:has(#urlbar[breakout-extend]) #urlbar {
-      font-size: 1em !important;
+/*       font-size: 1em !important; */
       height: fit-content !important;
       padding-inline: 2px !important;
       padding-block: 2px !important;
@@ -1349,11 +1352,11 @@
     #urlbar-container:has(#urlbar[breakout-extend]) #urlbar .urlbar-input-container {
       height: fit-content !important;
       margin: 0px !important;
-      padding-block: 12px !important;
-      padding-inline: 17px !important;
+      padding-block: 8px !important;
+      padding-inline: 8px !important;
     }
 
-    #urlbar-container:has(#urlbar[breakout-extend]) #identity-box,
+
     #urlbar-container:has(#urlbar[breakout-extend]) #page-action-buttons,
     #urlbar-container:has(#urlbar[breakout-extend]) #tracking-protection-icon-container,
     #urlbar-container:has(#urlbar[breakout-extend]) #urlbar-go-button,
@@ -1365,9 +1368,9 @@
       margin-inline: 0px !important;
     }
 
-    #urlbar-container:has(#urlbar[breakout-extend]) #urlbar-results {
+/*     #urlbar-container:has(#urlbar[breakout-extend]) #urlbar-results {
       font-size: 1em !important;
-    }
+    } */
 
     /* Hide/style website icons based on preferences */
     @media (-moz-bool-pref: "wireframe.urlbar.icons.hide") {
@@ -1386,8 +1389,8 @@
 
     #urlbar-container:has(#urlbar[breakout-extend]) .urlbarView-results div {
       margin: 0px !important;
-      padding-block: 2px !important;
-      padding-inline: 6px !important;
+      padding-block: 0px !important;
+      padding-inline: 0px !important;
       border-radius: var(--na-tab-border-radius) !important;
     }
 
@@ -1492,8 +1495,8 @@
 
   @media (-moz-pref("wireframe.urlbar.style","full")){
     #urlbar[open] {
-      min-width: var(--na-urlbar-width) !important;
-      max-width: var(--na-urlbar-width) !important;
+      min-width: 500px !important;
+      max-width: 500px !important;
     }
 
     @media not (-moz-pref("zen.view.use-single-toolbar")) {
@@ -1513,6 +1516,18 @@
     #urlbar-container:has(#urlbar[breakout-extend]) #urlbar-anon-search-settings {
      display: none !important;
     } */
+    
+    #urlbar-container:has(#urlbar[breakout-extend]) #urlbar .urlbar-input-container {
+      padding-block: 0px !important;
+      padding-inline: 8px !important;
+    }
+    
+    #urlbar-container:has(#urlbar[breakout-extend]) .urlbarView-results div {
+      margin: 0px !important;
+      padding-block: 0px !important;
+      padding-inline: 0px !important;
+      border-radius: var(--na-tab-border-radius) !important;
+    }
 
     /* Hide/style website icons based on preferences */
     @media (-moz-bool-pref: "wireframe.urlbar.icons.hide") {

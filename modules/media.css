@@ -124,6 +124,10 @@
   .tab-content .tab-icon-overlay{
     display: none !important;
   }
+  
+  .tab-audio-button{
+    display: none !important;
+  }
 }
 
 

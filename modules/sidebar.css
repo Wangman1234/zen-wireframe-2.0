@@ -369,7 +369,7 @@
 /* === WORKSPACE INDICATOR REVEAL ON HOVER === */
 
 @media (-moz-pref("wireframe.workspace.icon.hide")){
-    #titlebar .zen-current-workspace-indicator > hbox{
+    #titlebar .zen-current-workspace-indicator-stack {
       visibility: collapse !important;
       opacity: 0.0 !important;
       transform: translateX(-4px) scale(0.92);
@@ -390,7 +390,7 @@
     }
     
     :root:has(#titlebar .zen-current-workspace-indicator:hover){
-      #titlebar .zen-current-workspace-indicator > hbox{
+      #titlebar .zen-current-workspace-indicator-stack{
         visibility: visible !important;
         opacity: 1 !important;
         transform: translateX(0) scale(1);

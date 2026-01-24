@@ -134,6 +134,24 @@
       color-mix(in srgb, var(--tab-selected-bgcolor) 55%, transparent)
     );
   }
+  
+  /* hide dots by default (fan closed) */
+  #zen-workspaces-button > toolbarbutton::after {
+    opacity: 0 !important;
+  }
+
+  /* show dots only when fan is open (hovering the hub) */
+  #zen-workspaces-button:hover > toolbarbutton:not([active="true"])::after {
+    opacity: 1 !important;
+  }
+
+  #zen-workspaces-button:hover > toolbarbutton:hover::after {
+      opacity: 0 !important;
+    }
+
+  #zen-workspaces-button:hover > toolbarbutton[active="true"]::after {
+    opacity: 0 !important;
+  }
 }
 
 

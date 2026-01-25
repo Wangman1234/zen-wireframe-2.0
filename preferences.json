@@ -926,6 +926,25 @@
   },
   {
     "type": "dropdown",
+    "property": "wireframe.tab.borders",
+    "label": "Border styling for tabs",
+    "value": "string",
+    "options": [
+      {
+        "value": "macos-all",
+        "label": "macOS: All"
+      },
+      {
+        "value": "macos-active",
+        "label": "macOS: Active"
+      }
+    ]
+  },
+  {
+    "type": "separator"
+  },
+  {
+    "type": "dropdown",
     "property": "wireframe.tab.border_radius",
     "label": "Border radius for tabs",
     "value": "number",
@@ -958,6 +977,25 @@
       {
         "value": 24,
         "label": "24px"
+      }
+    ]
+  },
+  {
+    "type": "separator"
+  },
+  {
+    "type": "dropdown",
+    "property": "wireframe.essen.borders",
+    "label": "Border styling for essentials",
+    "value": "string",
+    "options": [
+      {
+        "value": "macos-all",
+        "label": "macOS: All"
+      },
+      {
+        "value": "macos-active",
+        "label": "macOS: Active"
       }
     ]
   },

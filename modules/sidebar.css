@@ -561,7 +561,7 @@
   border-color: var(--toolbox-textcolor) !important;
 }
 
-/* macos border for compact sidebar */
+/* === macos border for compact sidebar === */
 
 @media (-moz-pref("wireframe.macos.border")){
   :root[zen-compact-mode="true"] #titlebar{

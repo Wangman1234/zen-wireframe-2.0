@@ -19,7 +19,7 @@
     "property": "wireframe.macos.controls",
     "label": "Disable macOS style window controls",
     "value": "boolean",
-    "default": false
+    "defaultValue": false
   },
   {
     "type": "separator"
@@ -29,7 +29,7 @@
     "property": "wireframe.controls.reverse",
     "label": "Reverse window controls",
     "value": "boolean",
-    "default": false
+    "defaultValue": false
   },
   {
     "type": "separator"
@@ -39,7 +39,7 @@
     "property": "wireframe.macos.controls.radius",
     "label": "Change macos window control radius",
     "value": "number",
-    "default": 0,
+    "defaultValue": 0,
     "options": [
       {
         "value": 0,
@@ -63,10 +63,9 @@
     "property": "zen.view.experimental-force-window-controls-left",
     "label": "Force window controls to the left (for macOS style controls only)",
     "value": "boolean",
-    "default": true,
+    "defaultValue": true,
     "restart": true
   },
-
   {
     "type": "text",
     "label": "Toolbar and Navigation",
@@ -81,7 +80,7 @@
     "property": "wireframe.toolbar.hide",
     "label": "Auto hide toolbar buttons (Reveal on hover)",
     "value": "boolean",
-    "default": false
+    "defaultValue": false
   },
   {
     "type": "separator"
@@ -91,7 +90,7 @@
     "property": "wireframe.navigation.hide",
     "label": "Disable navigation buttons",
     "value": "boolean",
-    "default": false
+    "defaultValue": false
   },
   {
     "type": "separator"
@@ -101,7 +100,7 @@
     "property": "wireframe.workspace.icon.hide",
     "label": "Hide workspace indicator icon",
     "value": "boolean",
-    "default": true
+    "defaultValue": true
   },
   {
     "type": "separator"
@@ -111,7 +110,7 @@
     "property": "wireframe.workspace-switch.fan",
     "label": "Enable fan style workspace switcher (experimental)",
     "value": "boolean",
-    "default": false
+    "defaultValue": false
   },
   {
     "type": "separator"
@@ -121,7 +120,7 @@
     "property": "wireframe.sidebar-foot.hide",
     "label": "Hide sidebar foot buttons",
     "value": "boolean",
-    "default": true
+    "defaultValue": true
   },
   {
     "type": "separator"
@@ -131,7 +130,17 @@
     "property": "wireframe.statusbar.disable",
     "label": "Disable status bar",
     "value": "boolean",
-    "default": true
+    "defaultValue": true
+  },
+  {
+    "type": "separator"
+  },
+  {
+    "type": "checkbox",
+    "property": "wireframe.floating-compact-sidebar.enabled",
+    "label": "Enable floating compact sidebar",
+    "value": "boolean",
+    "defaultValue": true
   },
   {
     "type": "separator"
@@ -203,7 +212,6 @@
     "value": "boolean",
     "default": true
   },
-
   {
     "type": "text",
     "label": "URL bar Settings",
@@ -234,7 +242,7 @@
       }
     ]
   },
-    {
+  {
     "type": "separator"
   },
   {
@@ -293,6 +301,16 @@
     "default": false,
     "type": "checkbox",
     "value": "boolean"
+  },
+  {
+    "type": "separator"
+  },
+  {
+    "type": "checkbox",
+    "property": "wireframe.urlbar-loading.text",
+    "label": "Enable custom new urlbar loading text",
+    "value": "boolean",
+    "defaultValue": true
   },
   {
     "type": "separator"
@@ -414,7 +432,6 @@
     "value": "boolean",
     "default": false
   },
-
   {
     "type": "text",
     "label": "Cool Visual Element Settings",
@@ -617,7 +634,6 @@
     "defaultValue": "0.7",
     "placeholder": "0.7"
   },
-
   {
     "type": "text",
     "label": "Tab Settings",
@@ -768,7 +784,6 @@
       }
     ]
   },
-
   {
     "type": "text",
     "label": "Border Settings",
@@ -1043,7 +1058,6 @@
       }
     ]
   },
-
   {
     "type": "text",
     "label": "Typography",
@@ -1101,7 +1115,6 @@
     "defaultValue": "",
     "placeholder": "12px"
   },
-
   {
     "type": "text",
     "label": "Picture-in-Picture",
@@ -1170,7 +1183,6 @@
     "value": "boolean",
     "default": false
   },
-
   {
     "type": "text",
     "label": "Media Player",

@@ -82,32 +82,36 @@
   border-bottom: 1px solid var(--toolbar-textcolor) !important;
 }
 
-/* urlbar loading text */
-#urlbar>.urlbar-input-container>.urlbar-input-box::before {
-  content: "wireframing..." !important;
-  padding-inline: 10px !important;
-  animation: slideUpAdressBar var(--na-anim-duration) ease;
-  animation-play-state: paused;
-  transition: opacity 0.6s;
-  align-self: center;
-  visibility: collapse !important;
-  opacity: 0;
-}
 
-#urlbar:not([breakout-extend]) .urlbar-input-container>.urlbar-input-box>input {
-  opacity: 1 !important;
-  transition: opacity 0.6s;
-}
+/* URLBAR loading text */
 
-#main-window:has(.tabbrowser-tab[selected][busy]) #urlbar:not([breakout-extend]) .urlbar-input-container>.urlbar-input-box>input {
-  transition: opacity 3s ease;
-  opacity: 0 !important;
-}
+@media (-moz-pref("wireframe.urlbar-loading.text")){
+  #urlbar>.urlbar-input-container>.urlbar-input-box::before {
+    content: "wireframing..." !important;
+    padding-inline: 10px !important;
+    animation: slideUpAdressBar var(--na-anim-duration) ease;
+    animation-play-state: paused;
+    transition: opacity 0.6s;
+    align-self: center;
+    visibility: collapse !important;
+    opacity: 0;
+  }
 
-#main-window:has(.tabbrowser-tab[selected][busy]) #urlbar:not([breakout-extend]) .urlbar-input-container>.urlbar-input-box::before {
-  animation-play-state: running;
-  visibility: visible !important;
-  opacity: 1;
+  #urlbar:not([breakout-extend]) .urlbar-input-container>.urlbar-input-box>input {
+    opacity: 1 !important;
+    transition: opacity 0.6s;
+  }
+
+  #main-window:has(.tabbrowser-tab[selected][busy]) #urlbar:not([breakout-extend]) .urlbar-input-container>.urlbar-input-box>input {
+    transition: opacity 3s ease;
+    opacity: 0 !important;
+  }
+
+  #main-window:has(.tabbrowser-tab[selected][busy]) #urlbar:not([breakout-extend]) .urlbar-input-container>.urlbar-input-box::before {
+    animation-play-state: running;
+    visibility: visible !important;
+    opacity: 1;
+  }
 }
 
 #urlbar {

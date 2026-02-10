@@ -378,8 +378,8 @@
   /* the fill animation */
   @keyframes tabFillAnim {
     0%   { width: 0%; opacity: 0.5; }
-    50%  { width: 100%; opacity: 0.75; }
-    100% { width: 100%; opacity: 1; }
+    50%  { width: 95%; opacity: 0.75; }
+    100% { width: 95%; opacity: 1; }
   }
 }
 
@@ -461,8 +461,8 @@
   /* the fill animation */
   @keyframes tabFillAnim {
     0%   { width: 0%; opacity: 0.5; }
-    50%  { width: 100%; opacity: 0.75; }
-    100% { width: 100%; opacity: 1; }
+    50%  { width: 95%; opacity: 0.75; }
+    100% { width: 95%; opacity: 1; }
   }
 }
 

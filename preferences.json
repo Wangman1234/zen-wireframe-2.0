@@ -814,6 +814,16 @@
     "type": "separator"
   },
   {
+    "type": "string",
+    "property": "wf-border-color",
+    "processAs": "root",
+    "label": "Change border color",
+    "placeholder": "#000000"
+  },
+  {
+    "type": "separator"
+  },
+  {
     "type": "dropdown",
     "property": "wireframe.webview.border",
     "label": "Change border around the webview",

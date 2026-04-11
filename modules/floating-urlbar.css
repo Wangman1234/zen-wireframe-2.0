@@ -22,21 +22,46 @@
 }
 
 /* ====== FLOATING TRANSPARENT URLBAR ====== */
-@media(-moz-pref("wireframe.urlbar.blurred")){
-  #urlbar[open] .urlbar-background {
-    background: var(--zen-main-browser-background) !important;
-    opacity: var(--zen-background-opacity) !important;
+@media (-moz-pref("wireframe.urlbar.blurred")) {
+  #urlbar[zen-floating-urlbar="true"][breakout-extend="true"] > .urlbar-background {
+    background: color-mix(
+      in srgb,
+      var(--zen-primary-color) 50%,
+      transparent
+    ) !important;
+  }
+  
+  :root[zen-default-theme] 
+  #urlbar[zen-floating-urlbar="true"][breakout-extend="true"] > .urlbar-background {
+
+  background: color-mix(
+    in srgb,
+    var(--zen-primary-color) 50%,
+    rgba(0, 0, 0, 0.6)
+  ) !important;
+}
 }
 
+@media (-moz-pref("wireframe.urlbar.blurred")) {
 
-  #urlbar[open] {
-    backdrop-filter: blur(24px) brightness(0.55) !important;
+  /* DARK MODE */
+  :root[zen-should-be-dark-mode="true"] #urlbar[open] {
+    backdrop-filter: blur(28px) saturate(160%) brightness(0.8);
+  }
+
+  /* LIGHT MODE */
+  :root[zen-should-be-dark-mode="false"] #urlbar[open] {
+    backdrop-filter: blur(28px) saturate(160%) brightness(1.1);
+  }
+  
+  :root[zen-default-theme] #urlbar[open] {
+    backdrop-filter: blur(28px) saturate(160%) brightness(1);
   }
 }
 
 @media (-moz-pref("wireframe.urlbar.border","wireframe")){
-  #urlbar[open] .urlbar-background {
-    outline: 2px solid var(--na-color-border) !important;
+  #urlbar[zen-floating-urlbar="true"] {
+  --zen-urlbar-background: var(--zen-main-browser-background) !important;
   }
 }
 

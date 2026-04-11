@@ -177,6 +177,16 @@
   },
   {
     "type": "checkbox",
+    "property": "wireframe.ff-sidebar.floating",
+    "label": "Enable floating firefox sidebar",
+    "value": "boolean",
+    "defaultValue": true
+  },
+  {
+    "type": "separator"
+  },
+  {
+    "type": "checkbox",
     "property": "wireframe.nogaps.enabled",
     "label": "Enable no gap for single-toolbar",
     "value": "boolean",

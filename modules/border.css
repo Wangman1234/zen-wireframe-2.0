@@ -291,18 +291,23 @@ body > hbox {
     border-radius: 0px !important;
     /*! margin: 0px !important; */
     padding: 0px !important;
-    overflow: hidden !important;
 }
 
 /* window */
 #zen-tabbox-wrapper {
-    box-shadow: none !important;
-    overflow: clip !important;
     padding: 0px !important;
     /*! background-color: var(--na-color-bg) !important; */
-    overflow: hidden !important;
     padding: 0px !important;
-    background-clip: padding-box !important;
+}
+
+@media (-moz-pref("wireframe.tab-shadow.disabled")){
+    #zen-appcontent-wrapper{
+        overflow: hidden !important;
+    }
+    
+    #zen-tabbox-wrapper{
+        overflow: hidden !important;
+    }
 }
 
 /* WEBVIEW BORDER RADIUS */
@@ -312,6 +317,8 @@ body > hbox {
     margin: 0 !important;
     padding: 0 !important;
     box-sizing: border-box !important;
+    
+    
 }
 
 :root[zen-right-side="true"]:not([zen-compact-mode="true"]):not(

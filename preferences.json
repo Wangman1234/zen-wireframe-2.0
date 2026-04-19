@@ -26,6 +26,16 @@
   },
   {
     "type": "checkbox",
+    "property": "wireframe.macos.controls.focus",
+    "label": "Greyscale controls if window is inactive (macOS style only)",
+    "value": "boolean",
+    "defaultValue": true
+  },
+  {
+    "type": "separator"
+  },
+  {
+    "type": "checkbox",
     "property": "wireframe.controls.reverse",
     "label": "Reverse window controls",
     "value": "boolean",
@@ -849,6 +859,16 @@
         "label": "macos"
       }
     ]
+  },
+  {
+    "type": "separator"
+  },
+  {
+    "type": "checkbox",
+    "property": "wireframe.tab-shadow.disabled",
+    "label": "Disable tab shadow",
+    "value": "boolean",
+    "defaultValue": true
   },
   {
     "type": "separator"

@@ -371,23 +371,25 @@ body > hbox {
 /* NO GAPS COMPACT MODE (DEFAULT) */
 
 :root[zen-single-toolbar="true"][zen-compact-mode="true"]:not([customizing]) {
-    /* Credits to CompTechGuy */
-    #zen-appcontent-navbar-wrapper {
-        min-height: 0.1px !important;
-        height: 0.1px !important;
-    }
-
-    #zen-appcontent-navbar-wrapper[zen-has-hover="true"] {
-        height: 34px !important;
-    }
-
-    --zen-element-separation: 0px !important;
-
-    #zen-tabbox-wrapper,
-    #tabbrowser-tabbox,
-    #tabbrowser-tabbox > * {
-        border-radius: var(--na-window-border-radius) !important;
-    }
+	@media not (-moz-pref("wireframe.window.border_compact")){
+	    /* Credits to CompTechGuy */
+	    #zen-appcontent-navbar-wrapper {
+	        min-height: 0.1px !important;
+	        height: 0.1px !important;
+	    }
+	
+	    #zen-appcontent-navbar-wrapper[zen-has-hover="true"] {
+	        height: 34px !important;
+	    }
+	
+	    --zen-element-separation: 0px !important;
+	
+	    #zen-tabbox-wrapper,
+	    #tabbrowser-tabbox,
+	    #tabbrowser-tabbox > * {
+	        border-radius: var(--na-window-border-radius) !important;
+	    }
+	}
 }
 
 /* FIX : REMOVE NAVBAR CONTAINER WHEN EMPTY */

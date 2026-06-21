@@ -167,8 +167,9 @@ body > hbox {
         [inDOMFullscreen="true"]
     )
     .browserSidebarContainer {
+	@media not (-moz-pref("wireframe.window.border_compact")) {
     border-radius: var(--na-window-border-radius) !important;
-}
+}}
 
 :root:not([sizemode="normal"]) .browserSidebarContainer {
     border-radius: 0 !important;
@@ -183,6 +184,13 @@ body > hbox {
         #zen-tabbox-wrapper {
         border: 0.1px solid transparent !important;
     }
+    :root[zen-right-side="true"]:not(
+            [inDOMFullscreen="true"]
+        )
+        #zen-tabbox-wrapper {
+		@media (-moz-pref("wireframe.window.border_compact")){
+        	border: 0.1px solid transparent !important;
+	}}
 
     /* content window border size on LEFT side tabbar */
     :root:not([zen-right-side="true"]):not([zen-compact-mode="true"]):not(
@@ -191,6 +199,13 @@ body > hbox {
         #zen-tabbox-wrapper {
         border: 0.1px solid transparent !important;
     }
+    :root:not([zen-right-side="true"]):not(
+            [inDOMFullscreen="true"]
+        )
+        #zen-tabbox-wrapper {
+		@media (-moz-pref("wireframe.window.border_compact")){
+        border: 0.1px solid transparent !important;
+	}}
 }
 
 @media (-moz-pref("wireframe.webview.border", "wireframe")){
@@ -201,6 +216,13 @@ body > hbox {
         #zen-tabbox-wrapper {
         border: 2px solid var(--na-color-border) !important;
     }
+    :root[zen-right-side="true"]:not(
+            [inDOMFullscreen="true"]
+        )
+        #zen-tabbox-wrapper {
+		@media (-moz-pref("wireframe.window.border_compact")){
+        border: 2px solid var(--na-color-border) !important;
+    }}
 
     /* content window border size on LEFT side tabbar */
     :root:not([zen-right-side="true"]):not([zen-compact-mode="true"]):not(
@@ -209,6 +231,13 @@ body > hbox {
         #zen-tabbox-wrapper {
         border: 2px solid var(--na-color-border) !important;
     }
+    :root:not([zen-right-side="true"]):not(
+            [inDOMFullscreen="true"]
+        )
+        #zen-tabbox-wrapper {
+		@media (-moz-pref("wireframe.window.border_compact")){
+        border: 2px solid var(--na-color-border) !important;
+    }}
 }
 
 @media (-moz-pref("wireframe.webview.border", "macos")) {
@@ -242,6 +271,37 @@ body > hbox {
         /* --- depth ring (slightly larger, softer) --- */
         0 2px 5px rgba(0,0,0,0.08);
   }
+
+  :root:not([inDOMFullscreen="true"])
+
+  #zen-tabbox-wrapper::before {
+  @media (-moz-pref("wireframe.window.border_compact")){
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      border-radius: var(--na-user-border-radius);
+      z-index: 9999;
+
+      box-shadow:
+        /* --- micro corner mask (softened) --- */
+        inset 0 0 0 1px rgba(255,255,255,0.10),
+
+        /* --- milky curved highlight (the secret sauce) --- */
+        inset 0 0 0 2px rgba(255,255,255,0.22),
+
+        /* --- concave falloff (boosted softness) --- */
+        inset 0 0 12px 6px rgba(0,0,0,0.06),
+
+        /* --- softened outer rim (less harsh) --- */
+        0 0 0 1px rgba(0,0,0,0.18),
+
+        /* --- light spread glow (barely visible, creates “milkiness”) --- */
+        0 0 12px 5px rgba(255,255,255,0.10),
+
+        /* --- depth ring (slightly larger, softer) --- */
+        0 2px 5px rgba(0,0,0,0.08);
+	}}
 }
 
 
@@ -255,6 +315,13 @@ body > hbox {
         #zen-tabbox-wrapper {
         border: 0.1px solid transparent !important;
     }
+    :root[zen-right-side="true"]:not(
+            [inDOMFullscreen="true"]
+        )
+        #zen-tabbox-wrapper {
+		@media (-moz-pref("wireframe.window.border_compact")){
+        border: 0.1px solid transparent !important;
+    }}
 
     /* content window border size on LEFT side tabbar */
     :root:not([zen-right-side="true"]):not([zen-compact-mode="true"]):not(
@@ -263,6 +330,13 @@ body > hbox {
         #zen-tabbox-wrapper {
         border: 0.1px solid transparent !important;
     }
+    :root:not([zen-right-side="true"]):not(
+            [inDOMFullscreen="true"]
+        )
+        #zen-tabbox-wrapper {
+		@media (-moz-pref("wireframe.window.border_compact")){
+        border: 0.1px solid transparent !important;
+    }}
 }
 
 /* remove content window border on split tabs*/
@@ -327,6 +401,13 @@ body > hbox {
     #zen-tabbox-wrapper {
     border-radius: var(--na-user-border-radius) !important;
 }
+:root[zen-right-side="true"]:not(
+        [inDOMFullscreen="true"]
+    )
+    #zen-tabbox-wrapper {
+	@media (-moz-pref("wireframe.window.border_compact")){
+    border-radius: var(--na-user-border-radius) !important;
+}}
 
 :root:not([zen-right-side="true"]):not([zen-compact-mode="true"]):not(
         [inDOMFullscreen="true"]
@@ -334,6 +415,13 @@ body > hbox {
     #zen-tabbox-wrapper {
     border-radius: var(--na-user-border-radius) !important;
 }
+:root:not([zen-right-side="true"]):not(
+        [inDOMFullscreen="true"]
+    )
+    #zen-tabbox-wrapper {
+	@media (-moz-pref("wireframe.window.border_compact")){
+    border-radius: var(--na-user-border-radius) !important;
+}}
 
 /* ADD WEBVIEW BORDER RADIUS TO CHILDREN ELEMENTS OF TABBOX */
 :root:not([zen-compact-mode="true"]) {
@@ -348,17 +436,33 @@ body > hbox {
         }
 /*     } */
 }
+:root {
+	@media (-moz-pref("wireframe.window.border_compact")){
+/*     @media not (-moz-pref("wireframe.nogaps.enabled")) { */
+        #tabbrowser-tabpanels {
+            border-radius: var(--na-user-border-radius) !important;
+        }
+
+        #tabbrowser-tabpanels > * {
+            border-radius: inherit !important;
+            transition: border-radius 0.18s linear !important;
+        }
+/*     } */
+	}
+}
 
 :root:has([zen-compact-mode="true"]):has([sizemode="normal"])
     ):has(#zen-appcontent-navbar-wrapper[zen-has-hover="false"]) {
-    #zen-tabbox-wrapper {
-        border-radius: var(--na-window-border-radius) !important;
-    }
-
-    #tabbrowser-tabbox,
-    #tabbrowser-tabbox > * {
-        border-radius: var(--na-window-border-radius) !important;
-    }
+	@media not (-moz-pref("wireframe.window.border_compact")){
+	    #zen-tabbox-wrapper {
+	        border-radius: var(--na-window-border-radius) !important;
+	    }
+	
+	    #tabbrowser-tabbox,
+	    #tabbrowser-tabbox > * {
+	        border-radius: var(--na-window-border-radius) !important;
+	    }
+	}
 }
 
 :root[inDOMFullscreen="true"] {

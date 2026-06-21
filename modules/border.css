@@ -787,28 +787,6 @@ body > hbox {
         }
     }
     
-    :root[zen-single-toolbar="true"]:not([zen-right-side="true"]){
-		@media (-moz-pref("wireframe.window.border_compact")){
-	        #zen-tabbox-wrapper,
-	        #tabbrowser-tabbox,
-	        #tabbrowser-tabpanels,
-	        #tabbrowser-tabpanels > * {
-	            border-top-left-radius: 0px !important;
-	            border-bottom-left-radius: 0px !important;
-	            border-top-right-radius: 0px !important;
-	            border-bottom-right-radius: 0px !important;
-	        }
-	        
-	        #zen-tabbox-wrapper{
-	            border: none !important;
-	        }
-	        
-	        #zen-tabbox-wrapper::before {
-	            box-shadow: none !important;
-	        }
-		}
-    }
-    
     :root[zen-single-toolbar="true"][zen-right-side="true"]:not([zen-compact-mode="true"]){
         #zen-tabbox-wrapper,
         #tabbrowser-tabbox,
@@ -827,28 +805,6 @@ body > hbox {
         #zen-tabbox-wrapper::before {
             box-shadow: none !important;
         }
-    }
-    
-    :root[zen-single-toolbar="true"][zen-right-side="true"]:not([zen-compact-mode="true"]){
-		@media (-moz-pref("wireframe.window.border_compact")){
-	        #zen-tabbox-wrapper,
-	        #tabbrowser-tabbox,
-	        #tabbrowser-tabpanels,
-	        #tabbrowser-tabpanels > * {
-	            border-top-right-radius: 0px !important;
-	            border-bottom-right-radius: 0px !important;
-	            border-top-left-radius: 0px !important;
-	            border-bottom-left-radius: 0px !important;
-	        }
-	        
-	        #zen-tabbox-wrapper{
-	            border: none !important;
-	        }
-	        
-	        #zen-tabbox-wrapper::before {
-	            box-shadow: none !important;
-	        }
-		}
     }
 }
 

@@ -1,4 +1,3 @@
-
 # Wireframe Theme Configuration
 
 ## Preferences Implementation
@@ -41,9 +40,9 @@ This theme implements customizable preferences using Zen Browser's preference sy
 
 ## How Preferences Work
 
-  /* Styles when preference is enabled */
-  
-```
+/_ Styles when preference is enabled _/
+
+````
 
 ### Implementation Example
 For the URL bar position preference, we've implemented a single boolean preference:
@@ -65,7 +64,7 @@ For the URL bar position preference, we've implemented a single boolean preferen
     flex-direction: column-reverse;
   }
 }
-```
+````
 
 ## Adding New Preferences
 
@@ -87,14 +86,18 @@ To add new preferences to the theme:
 ## New Features in Wireframe 2.0
 
 ### Border Radius Controls
+
 Wireframe 2.0 introduces comprehensive border radius controls for different UI elements:
+
 - Webview border radius: Control the corner radius of the web content area
 - Window border radius: Adjust the corner radius of the browser window
 - Tab border radius: Customize the corner radius of browser tabs
 - Essentials border radius: Modify the corner radius of essential UI elements like bookmarks and extensions
 
 ### Typography Options
+
 The theme now supports multiple font options with the `wireframe.font` preference:
+
 - SF-Pro: Apple's system font
 - Bricolage: Bricolage Grotesque font
 - GeistMono: Clean monospace font
@@ -103,10 +106,13 @@ The theme now supports multiple font options with the `wireframe.font` preferenc
 - SUSEMono: Monospace variant of SUSE
 
 ### Favicon Background Control
+
 You can now disable the background for favicons in the essentials toolbar using the `zen.theme.essentials-favicon-bg` preference.
 
 ### Window Control Radius
+
 Enhanced customization options for macOS style window controls with the `wireframe.macos.controls.radius` preference.
 
 ### Fullscreen and Maximized Mode Fixes
+
 Fixed border radius issues when the browser is in fullscreen and maximized modes, ensuring consistent styling across all window states.

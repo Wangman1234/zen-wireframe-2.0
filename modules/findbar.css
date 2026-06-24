@@ -18,7 +18,6 @@ findbar {
   background: var(--zen-primary-color) !important;
 }
 
-
 findbar[hidden] {
   animation: slideDown var(--na-anim-duration) ease;
   visibility: hidden !important;
@@ -33,7 +32,7 @@ findbar[hidden] {
   padding-right: 10px !important;
 }
 
-.findbar-container>:first-child {
+.findbar-container > :first-child {
   width: 100% !important;
 }
 
@@ -52,7 +51,7 @@ findbar[hidden] {
   background-color: var(--zen-primary-color) !important;
 }
 
-.findbar-textbox:focus{
+.findbar-textbox:focus {
   outline: none !important;
 }
 

@@ -1,6 +1,9 @@
 /* === User defined configs ===*/
 :root {
-  --na-color-border: var(--wf-border-color, light-dark(rgba(0, 0, 0, 1), rgba(209, 207, 192, 1)));
+  --na-color-border: var(
+    --wf-border-color,
+    light-dark(rgba(0, 0, 0, 1), rgba(209, 207, 192, 1))
+  );
 }
 
 :root {
@@ -17,24 +20,33 @@
 }
 
 :root {
-    --na-color-text: light-dark(rgba(30, 30, 31,1), rgba(209, 207, 192, 1));
-    --na-color-bg: light-dark(rgba(239, 233, 217, 1), rgba(30, 30, 31, 1));
-    --na-color-text-second: light-dark(rgba(30, 30, 31, 0.25), rgba(209, 207, 192, 0.25));
-    --na-color-bg-second: var(--zen-colors-secondary) !important;
-    --na-color-zero: rgba(0, 0, 0, 0); 
-    --na-urlbar-bg: light-dark((#00000011, #000000FF),(#f3f0e611, #f3f0e6FF)) !important;
+  --na-color-text: light-dark(rgba(30, 30, 31, 1), rgba(209, 207, 192, 1));
+  --na-color-bg: light-dark(rgba(239, 233, 217, 1), rgba(30, 30, 31, 1));
+  --na-color-text-second: light-dark(
+    rgba(30, 30, 31, 0.25),
+    rgba(209, 207, 192, 0.25)
+  );
+  --na-color-bg-second: var(--zen-colors-secondary) !important;
+  --na-color-zero: rgba(0, 0, 0, 0);
+  --na-urlbar-bg: light-dark(
+    (#00000011, #000000ff),
+    (#f3f0e611, #f3f0e6ff)
+  ) !important;
 }
 
 :root[privatebrowsingmode] {
-    --na-color-text: rgba(192, 180, 211, 1);
-    --na-color-bg: rgba(54, 20, 192, 1);
-    --na-color-text-second: rgba(192, 180, 211, 0.25);
-    --na-color-bg-second: rgba(54, 20, 192, 0.25);
-    --na-color-border: rgba(209, 207, 192, 1);
-    --na-color-zero: rgba(0, 0, 0);
-    --na-urlbar-bg: #f3f0e611, #f3f0e6FF;
-    --na-color-border: light-dark(rgba(0, 0, 0, 1),rgba(209, 207, 192, 1)) !important;
-  }
+  --na-color-text: rgba(192, 180, 211, 1);
+  --na-color-bg: rgba(54, 20, 192, 1);
+  --na-color-text-second: rgba(192, 180, 211, 0.25);
+  --na-color-bg-second: rgba(54, 20, 192, 0.25);
+  --na-color-border: rgba(209, 207, 192, 1);
+  --na-color-zero: rgba(0, 0, 0);
+  --na-urlbar-bg: #f3f0e611, #f3f0e6ff;
+  --na-color-border: light-dark(
+    rgba(0, 0, 0, 1),
+    rgba(209, 207, 192, 1)
+  ) !important;
+}
 
 /* @media (-moz-pref("wireframe.theme", 0)) {
   :root {

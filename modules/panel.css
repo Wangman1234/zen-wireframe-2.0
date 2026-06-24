@@ -7,8 +7,8 @@ panelview {
   color: var(--zen-primary-text) !important;
 }
 
-panelview box{
-  border-radius: 8px !important; 
+panelview box {
+  border-radius: 8px !important;
 }
 
 /* hide extension panel header */
@@ -18,28 +18,24 @@ panelview box{
   display: none !important;
 } */
 
-@media(-moz-pref("wireframe.contextmenu")){
+@media (-moz-pref("wireframe.contextmenu")) {
   .menupopup-arrowscrollbox {
     background: light-dark(
-      color-mix(in srgb, var(--zen-primary-color) 75%, transparent), 
+      color-mix(in srgb, var(--zen-primary-color) 75%, transparent),
       color-mix(in srgb, var(--zen-primary-color) 55%, transparent)
     ) !important;
 
     color: var(--toolbox-textcolor) !important;
-    
-    box-shadow:
-      inset 0 0 0 100vmax light-dark(
-        rgba(255, 255, 255, 0.1),
-        rgba(0, 0, 0, 0.1)
-      ) !important;
+
+    box-shadow: inset 0 0 0 100vmax
+      light-dark(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)) !important;
   }
 
-  
-/*   .menupopup-arrowscrollbox {
+  /*   .menupopup-arrowscrollbox {
     filter: brightness(1.5) saturate(1.2);
   } */
-  
-  .menupopup-arrowscrollbox::before{
+
+  .menupopup-arrowscrollbox::before {
     position: absolute;
     content: "";
     inset: 0;
@@ -47,18 +43,16 @@ panelview box{
     z-index: 0 !important;
     pointer-events: none !important;
     box-shadow: 
-      /* --- corner mask: prevents edge halo bleeding --- */ 
-      inset 0 0 0 1px rgba(255,255,255,0.22), 
-      /* --- curved metal highlight (top + edges) --- */ 
-      inset 0 0 0 2px rgba(255,255,255,0.32), 
-      /* --- inner soft falloff depth --- */ 
-      inset 0 0 8px 3px rgba(0,0,0,0.08), 
-      /* --- machined outer rim --- */ 
-      0 0 0 1.5px rgba(0,0,0,0.25), 
-      /* --- outer structure ring / subtle glow --- */ 
-      0 1.5px 3px rgba(0,0,0,0.20)
-  } 
-
+      /* --- corner mask: prevents edge halo bleeding --- */
+      inset 0 0 0 1px rgba(255, 255, 255, 0.22),
+      /* --- curved metal highlight (top + edges) --- */ inset 0 0 0 2px
+        rgba(255, 255, 255, 0.32),
+      /* --- inner soft falloff depth --- */ inset 0 0 8px 3px
+        rgba(0, 0, 0, 0.08),
+      /* --- machined outer rim --- */ 0 0 0 1.5px rgba(0, 0, 0, 0.25),
+      /* --- outer structure ring / subtle glow --- */ 0 1.5px 3px
+        rgba(0, 0, 0, 0.2);
+  }
 
   /* menu item base */
   menupopup menuitem,
@@ -82,9 +76,8 @@ panelview box{
   }
 
   menupopup menuitem {
-    transition: background-color 120ms ease, color 120ms ease;
+    transition:
+      background-color 120ms ease,
+      color 120ms ease;
   }
 }
-
-
-

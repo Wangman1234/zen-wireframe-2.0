@@ -1,21 +1,21 @@
 @-moz-document url("about:privatebrowsing") {
-    @media (prefers-color-scheme: light) {
-        :root {
-            --na-color-text: rgba(54, 20, 192, 1);
-            --na-color-bg: rgba(192, 180, 211, 0.6);
-        }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --na-color-text: rgba(54, 20, 192, 1);
+      --na-color-bg: rgba(192, 180, 211, 0.6);
     }
+  }
 
-    @media (prefers-color-scheme: dark) {
-        :root {
-            --na-color-text: rgba(192, 180, 211, 1);
-            --na-color-bg: rgba(54, 20, 192, 0.6);
-        }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --na-color-text: rgba(192, 180, 211, 1);
+      --na-color-bg: rgba(54, 20, 192, 0.6);
     }
+  }
 }
 
 /*@-moz-document url("about:newtab"), url("about:home"), url("about:blank") {*/
-    /* @media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
     :root {
       --na-color-text: rgba(30, 31, 0, 1);
       --na-color-bg: rgba(239, 233, 217, 0.6);
@@ -29,7 +29,7 @@
     }
   } */
 
-    /*@media (-moz-pref("wireframe.blank.theme", 0)) {
+/*@media (-moz-pref("wireframe.blank.theme", 0)) {
         :root {
             --na-color-text: rgba(209, 207, 192, 1);
             --na-color-bg: rgba(30, 30, 31, 0.6);
@@ -72,22 +72,22 @@
     pointer-events: none; 
   }*/
 
-  /* dark theme (default) */
-  /*@media (-moz-pref("wireframe.blank.theme", 0)) {
+/* dark theme (default) */
+/*@media (-moz-pref("wireframe.blank.theme", 0)) {
     html::before {
       filter: invert(0);
     }
   }*/
 
-  /* light theme */
-  /*@media (-moz-pref("wireframe.blank.theme", 1)) {
+/* light theme */
+/*@media (-moz-pref("wireframe.blank.theme", 1)) {
     html::before {
       filter: invert(1) hue-rotate(180deg);
     }
   }*/
 
-  /* transparent/dark theme */
-  /*@media (-moz-pref("wireframe.blank.theme", 2)) {
+/* transparent/dark theme */
+/*@media (-moz-pref("wireframe.blank.theme", 2)) {
     html::before {
       filter: invert(0);
     }
@@ -97,9 +97,9 @@
   .container {
     display: none !important;
   }*/
-  
-  /* === Logo Options === */
-  /*@media (-moz-pref("wireframe.blank.logo",0)){
+
+/* === Logo Options === */
+/*@media (-moz-pref("wireframe.blank.logo",0)){
       html::before{
         background-image: url("https://raw.githubusercontent.com/SehajveerSingh2005/zen-wireframe-2.0/bf814f7214b44020f2d2587d705bffdadd02c7f8/elements/wireframe.svg");
       }
@@ -135,8 +135,6 @@
       }
   }
 }*/
-
-
 
 /* old blank page logo using content rule */
 /*@-moz-document url("about:newtab"), url("about:blank"), url("about:privatebrowsing") {
